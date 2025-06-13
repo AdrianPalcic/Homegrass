@@ -27,3 +27,31 @@
     color: var(--main-color);
     border-bottom: 1px solid var(--main-color);
 }
+
+.navbar .menu {
+    transition: 0.3s ease;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .menu:hover {
+    color: var(--main-color)
+}
+
+
+
+@media (max-width:1010px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .menu {
+        display: block;
+    }
+}
+
+@media (max-width:450px) {
+    .navbar {
+        padding: 12px 10px;
+    }
+}

@@ -49,6 +49,7 @@ h3 {
   gap: 40px;
   justify-content: center;
   align-items: center;
+  padding: 0 6px;
 }
 
 .button-primary {
@@ -62,6 +63,7 @@ h3 {
   transition: 0.3s ease background-color;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   width: fit-content;
+  text-align: center;
 
 }
 
@@ -77,7 +79,7 @@ h3 {
   border: 2px solid var(--main-color);
   font-weight: bold;
   width: fit-content;
-
+  text-align: center;
   transition: 0.3s ease;
 }
 
@@ -204,7 +206,6 @@ h3 {
   outline: none;
   border: none;
   font-family: "Raleway", sans-serif;
-  width: 300px;
   opacity: 0.9;
   font-size: 16px;
 }
@@ -241,6 +242,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .section-title h3 {
@@ -450,4 +452,123 @@ footer .footer-social .socials .social-icon {
 
 footer .footer-social .socials .social-icon:hover {
   background-color: var(--secondary-color-dark);
+}
+
+
+
+@media (max-width:800px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .section-title h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .newsletter .newsletter-content .form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 20px 10px;
+  }
+
+  .cta {
+    padding: 0 10px;
+  }
+
+
+
+  .cta h3,
+  .cta h2 {
+    text-align: center;
+  }
+
+  .newsletter {
+    padding: 0 10px;
+  }
+
+  .newsletter .newsletter-content .form {
+    padding-right: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-title {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-title h2 {
+    position: relative;
+  }
+
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: -14px;
+    height: 3px;
+    width: 50%;
+    background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+    border-radius: 20px;
+  }
+
+  .navbar .logo .logo-svg {
+    width: 100px;
+  }
+
+  footer .logo-svg {
+    width: 100px;
+    margin-right: unset;
+  }
+}
+
+@media (max-width:470px) {
+  .proizvodi-container .proizvodi {
+    width: 100%;
+  }
+}
+
+@media (max-width:450px) {
+  .newsletter .newsletter-content .form {
+    width: 100%;
+  }
+
+  .newsletter .newsletter-content .form form input {
+    width: 100%;
+  }
+
+  .proizvodi-container .proizvodi .proizvodi-card {
+    width: 100%;
+  }
+
+  .projekti-container .projekti {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+@media (max-width:320px) {
+  .kvalifikacije {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 360px) {
+
+  .button-primary,
+  .button-secondary {
+    padding: 10px;
+  }
 }

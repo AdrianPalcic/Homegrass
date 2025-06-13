@@ -37,6 +37,7 @@
 .naslovna-hero .naslovna-hero-content h1,
 .naslovna-hero .naslovna-hero-content h3 {
     color: white;
+    text-align: center;
 }
 
 .container {
@@ -54,6 +55,7 @@
 
 .container .left h2 {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .container .left h3 {
@@ -87,17 +89,31 @@
 .naslovna-reviews h2 {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.naslovna-reviews h2::after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    bottom: -5px;
+    height: 3px;
+    width: 10%;
+    background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+    border-radius: 20px;
 }
 
 .reviews-container {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
 .reviews-container .review {
     background-color: var(--tetriary-color);
     padding: 20px 40px;
     border-radius: 20px;
+    flex: 1 0 300px;
 }
 
 .reviews-container .review .quote {
@@ -168,10 +184,120 @@
 .naslovna-diy .naslovna-diy-content h2 {
     color: white;
     text-align: center;
+    margin-bottom: 12px;
 }
 
 /* Na tisuču promijeni*/
 .naslovna-diy .naslovna-diy-content h3 {
     padding: 0 100px;
     margin-bottom: 20px;
+}
+
+
+@media (max-width:1050px) {
+    .naslovna-hero .naslovna-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .naslovna-hero .naslovna-hero-content h3 {
+        padding: 0 60px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .left h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width:830px) {
+    .naslovna-hero .naslovna-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .naslovna-diy .naslovna-diy-content {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .naslovna-diy .naslovna-diy-content h3 {
+        padding: 0 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container,
+    .kvalifikacije,
+    .naslovna-reviews {
+        padding: 0 10px;
+    }
+
+
+
+
+    .container .right img {
+        width: 100%;
+    }
+
+    .proizvodi-container,
+    .projekti-container {
+        padding: 20px 10px;
+    }
+
+    .naslovna-reviews h2::after {
+        content: "";
+        position: absolute;
+        left: 2 5%;
+        bottom: -5px;
+        height: 3px;
+        width: 50%;
+        background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .naslovna-hero .naslovna-hero-content h3 {
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .naslovna-reviews .reviews-container .review {
+        flex: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .naslovna-reviews .reviews-container .review {
+        padding: 20px;
+    }
+
+    .naslovna-reviews .reviews-container .review .text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 330px) {
+    .naslovna-reviews .reviews-container .review {
+        padding: 5px;
+    }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import MySVG from '../../utils/MySVG'
 import "../../css/navbar.css"
+import { Menu } from 'lucide-react'
 const Navbar = () => {
     return (
         <div className="navbar">
@@ -15,6 +16,9 @@ const Navbar = () => {
                 <Link to="/vodic">DIY - vodič</Link>
                 <Link className='last-child' to="/kontakt">Kontakt</Link>
             </nav>
+            <div className="menu">
+                <Menu />
+            </div>
         </div>
     )
 }
