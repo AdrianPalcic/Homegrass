@@ -1,0 +1,29 @@
+.logo-svg {
+    width: 200px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 60px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
