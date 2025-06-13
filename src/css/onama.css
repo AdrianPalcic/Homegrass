@@ -1,0 +1,199 @@
+.onama-hero {
+    margin-top: 30px;
+    padding: 0 60px;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+
+
+}
+
+.onama-hero .onama-hero-left h2 {
+    margin: 40px 0 20px 0;
+}
+
+.onama-hero .onama-hero-left h3 {
+    margin-bottom: 20px;
+}
+
+.onama-hero .onama-hero-right .image {
+    width: 700px;
+}
+
+.onama-hero .onama-hero-right .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.onama-sell {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.onama-sell .overlay-image-onama {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.onama-sell .overlay-image-onama img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+
+/*
+
+
+VELIKI PADDING SMANJI ZA FON
+
+*/
+.onama-sell .onama-sell-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 200px;
+}
+
+.onama-sell .onama-sell-content h2 {
+    margin-bottom: 20px;
+}
+
+.onama-sell .onama-sell-content h2,
+.onama-sell .onama-sell-content h3 {
+    color: white;
+    text-align: center;
+}
+
+.onama-sell .onama-sell-content h3 {
+    margin-bottom: 20px;
+}
+
+.onama-sell .onama-sell-content h2 span {
+    color: var(--main-color);
+}
+
+
+.proces {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proces h2 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.proces h3:not(.proces-grid .proces-item h3) {
+    margin-bottom: 40px;
+}
+
+.proces h2::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: -10px;
+    height: 3px;
+    width: 50%;
+    background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+    border-radius: 20px;
+}
+
+.proces .proces-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.proces .proces-grid .proces-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.proces .proces-grid .proces-item .img {
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.proces .proces-grid .proces-item h3 {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+
+
+
+@media (max-width:1200px) {
+    .onama-hero {
+        flex-direction: column;
+    }
+
+    .onama-hero .onama-hero-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .onama-hero .onama-hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .onama-hero .onama-hero-left h2,
+    .onama-hero .onama-hero-left h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 990px) {
+    .onama-sell .onama-sell-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .onama-hero .onama-hero-right .image {
+        width: 100%;
+    }
+
+    .onama-hero {
+        padding: 0 10px;
+        margin-top: 0;
+    }
+
+    .onama-hero .onama-hero-left h2 {
+        margin-top: 20px;
+    }
+
+
+    .onama-hero .onama-hero-left h2 {
+        font-size: 30px;
+    }
+}

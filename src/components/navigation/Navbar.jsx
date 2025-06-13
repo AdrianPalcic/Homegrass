@@ -10,7 +10,7 @@ const Navbar = () => {
                 <MySVG />
             </div>
             <nav className="nav-links">
-                <Link to="/O nama">O nama</Link>
+                <Link to="/onama">O nama</Link>
                 <Link to="/proizvodi">Naši Proizvodi</Link>
                 <Link to="/projekti">Naši Projekti</Link>
                 <Link to="/vodic">DIY - vodič</Link>
