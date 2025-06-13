@@ -1,9 +1,13 @@
 import React from 'react'
 
-const NaslovnaReviews = () => {
+const NaslovnaReviews = ({ listing }) => {
     return (
         <div className="naslovna-reviews">
-            <h2>Povjerenje koje traje</h2>
+            {
+                !listing ? (
+                    <h2>Povjerenje koje traje</h2>
+                ) : <h2>Klijenti zadovoljni svojim vrtom</h2>
+            }
             <div className="reviews-container">
                 <div className="review">
                     <div className='quote'>

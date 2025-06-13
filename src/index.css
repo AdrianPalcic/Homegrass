@@ -314,6 +314,27 @@ h3 {
   object-fit: cover;
 }
 
+.section-title2 {
+  text-align: center;
+}
+
+.section-title2 h2 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-title2 h2::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: -10px;
+  height: 3px;
+  width: 50%;
+  background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+  border-radius: 20px;
+}
+
+
 
 .projekti-container {
   display: flex;
