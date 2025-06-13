@@ -3,7 +3,7 @@
     padding: 0 60px;
     display: flex;
     gap: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     justify-content: space-between;
 
 }
@@ -47,7 +47,7 @@
 
 .why-diy .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
     width: 100%;
     margin-top: 20px;
@@ -66,7 +66,7 @@
     justify-content: end;
     position: relative;
     width: 100%;
-    height: 360px;
+    height: 200px;
     padding: 20px;
     transition: 0.3s ease;
 }
@@ -97,7 +97,7 @@
 }
 
 .alat-card .opis h3 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -115,6 +115,12 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 80px;
+}
+
+.prednosti h2 {
+    text-align: center;
+    padding: 0 60px;
+
 }
 
 .prednosti h3:not(.prednosti .prednosti-card-container .prednosti-card h3) {
@@ -192,7 +198,22 @@
     .DIY-hero .DIY-hero-left h3 {
         text-align: center;
     }
+
+    .why-diy .card-container {
+        display: flex;
+        overflow: auto;
+        gap: 50px;
+    }
+
+    .why-diy .card-container .alat-card {
+        min-width: 300px;
+        margin-top: 10px;
+        height: 200px;
+        padding: 10px;
+
+    }
 }
+
 
 @media (max-width: 600px) {
     .DIY-hero .DIY-hero-right .image {
@@ -205,7 +226,9 @@
     }
 
     .why-diy,
-    .prednosti .prednosti-card-container {
+    .prednosti .prednosti-card-container,
+    .prednosti h2,
+    .prednosti h3 {
         padding: 0 10px;
     }
 
@@ -232,9 +255,4 @@
         /* reduce padding too */
     }
 
-    .why-diy .card-container {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-        /* reduce padding too */
-    }
 }
