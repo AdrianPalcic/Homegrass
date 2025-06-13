@@ -1,0 +1,240 @@
+.DIY-hero {
+    margin-top: 30px;
+    padding: 0 60px;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+}
+
+.DIY-hero .DIY-hero-left h2 {
+    margin: 40px 0 20px 0;
+}
+
+.DIY-hero .DIY-hero-left h3 {
+    margin-bottom: 20px;
+}
+
+.DIY-hero .DIY-hero-right .image {
+    width: 700px;
+}
+
+.DIY-hero .DIY-hero-right .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+
+
+.why-diy {
+    padding: 0 60px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-diy .section-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.why-diy .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.why-diy .materijali {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
+}
+
+.alat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    position: relative;
+    width: 100%;
+    height: 360px;
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.alat-card:hover {
+    transform: scale(1.01);
+}
+
+.alat-card .image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+}
+
+.alat-card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: brightness(0.8);
+}
+
+.alat-card .opis h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.alat-card .opis h3,
+.alat-card .opis p {
+    color: white;
+}
+
+.materijali-head {
+    margin-bottom: 30px;
+}
+
+.prednosti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.prednosti h3:not(.prednosti .prednosti-card-container .prednosti-card h3) {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prednosti .prednosti-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+    width: 100%;
+    padding: 0 60px;
+
+}
+
+.prednosti .prednosti-card-container .prednosti-card {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--tetriary-color);
+    border-radius: 12px;
+}
+
+.prednosti .prednosti-card-container .prednosti-card .image {
+    color: white;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.prednosti .prednosti-card-container .prednosti-card h3 {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.prednosti .prednosti-card-container .prednosti-card h3,
+.prednosti .prednosti-card-container .prednosti-card p {
+    text-align: center;
+}
+
+.prednosti .prednosti-card-container .prednosti-card span {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(170, 170, 170);
+}
+
+.prednosti .prednosti-card-container .prednosti-card p {
+    margin-bottom: 20px;
+}
+
+@media (max-width:1200px) {
+    .DIY-hero {
+        flex-direction: column;
+    }
+
+    .DIY-hero .DIY-hero-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .DIY-hero .DIY-hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .DIY-hero .DIY-hero-left h2,
+    .DIY-hero .DIY-hero-left h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .DIY-hero .DIY-hero-right .image {
+        width: 100%;
+    }
+
+    .DIY-hero {
+        padding: 0 10px;
+        margin-top: 0;
+    }
+
+    .why-diy,
+    .prednosti .prednosti-card-container {
+        padding: 0 10px;
+    }
+
+
+
+    .DIY-hero .DIY-hero-left h2 {
+        margin-top: 20px;
+    }
+
+
+    .DIY-hero .DIY-hero-left h2 {
+        font-size: 30px;
+    }
+
+    .why-diy .card-container .alat-card {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 450px) {
+    .prednosti .prednosti-card-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        /* reduce padding too */
+    }
+
+    .why-diy .card-container {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+        /* reduce padding too */
+    }
+}

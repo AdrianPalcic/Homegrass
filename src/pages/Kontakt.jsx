@@ -1,8 +1,15 @@
-import React from 'react'
+import Newsletter from '../components/global/Newsletter'
+import KontaktForm from '../components/kontakt/KontaktForm'
+import KontaktHero from '../components/kontakt/KontaktHero'
+import '../css/kontakt.css'
 
 const Kontakt = () => {
     return (
-        <div>Kontakt</div>
+        <>
+            <KontaktHero />
+            <KontaktForm />
+            <Newsletter />
+        </>
     )
 }
 

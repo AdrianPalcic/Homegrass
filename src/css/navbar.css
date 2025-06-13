@@ -19,7 +19,7 @@
     text-transform: uppercase;
     font-weight: 500;
     color: var(--text-color);
-    transition: 0.3s ease;
+    transition: 0.3s ease color, 0.3s ease border-bottom;
     border-bottom: 1px solid transparent;
 }
 

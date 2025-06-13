@@ -8,6 +8,9 @@
   --tetriary-color: #F0F8F4;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -80,7 +83,7 @@ h3 {
   font-weight: bold;
   width: fit-content;
   text-align: center;
-  transition: 0.3s ease;
+  transition: 0.3s ease background-color, 0.3s ease color;
 }
 
 .naslovna-hero .naslovna-hero-content .buttons .button-secondary {
@@ -467,7 +470,7 @@ footer .footer-social .socials {
 footer .footer-social .socials .social-icon {
   padding: 6px;
   border-radius: 50%;
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   transition: 0.3s ease;
 }
 
