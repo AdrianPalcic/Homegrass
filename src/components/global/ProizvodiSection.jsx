@@ -1,7 +1,8 @@
 
 import ProizvodCard from '../cards/ProizvodCard'
 
-const Proizvodi = () => {
+const Proizvodi = ({ proizvodPage }) => {
+
 
     const dummyProizvodi = [
         {
@@ -50,11 +51,22 @@ const Proizvodi = () => {
 
         <div className="proizvodi-container">
             <div className='section-title'>
-                <h2>Naši Proizvodi</h2>
-                <h3>Umjetna trava</h3>
+                {!proizvodPage ? (
+                    <>
+                        <h2>Naši Proizvodi</h2>
+                        <h3>Umjetna trava</h3>
+                    </>
+                ) : (
+                    <>
+                        <h2>Ostali proizvodi</h2>
+                        <h3>Slični modeli umjetne trave</h3>
+                    </>
+                )
+                }
             </div>
             <div className="proizvodi">
                 {
+
                     dummyProizvodi.map((p) => (
                         <ProizvodCard key={p.id}
                             naziv={p.naziv}

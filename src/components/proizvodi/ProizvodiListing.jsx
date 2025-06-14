@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import ProizvodCard from '../cards/ProizvodCard'
-import FormButton from '../buttons/FormButton'
-import FormButtonSecondary from '../buttons/FormButtonSecondary'
+
 import { SlidersHorizontal } from 'lucide-react'
-import Modal from './Modal'
+import FilterBar from './FilterBar'
 
 const ProizvodiListing = () => {
 
@@ -76,105 +75,8 @@ const ProizvodiListing = () => {
                         }
                     </div>
                 </div>
-                <div className="filterbar">
-                    <h3>Filtriraj Proizvode</h3>
-                    <form>
-                        <div className="leftoright">
-                            <label for="debljina 32mm">
-                                <input type='checkbox' name="debljina 32mm" />
-                                Debljina 32mm <span>(2)</span>
-                            </label>
-                            <label for="debljina 42mm">
-                                <input type='checkbox' name="debljina 42mm" />
-                                Debljina 42mm <span>(3)</span>
-                            </label>
-                        </div>
-
-                        <h4>Namjena</h4>
-                        <div className="leftoright">
-                            <label for="Vrt">
-                                <input type='checkbox' name="Vrt" />
-                                Vrt
-                            </label>
-                            <label for="Igralište">
-                                <input type='checkbox' name="Igralište" />
-                                Igralište
-                            </label>
-                            <label for="balkon">
-                                <input type='checkbox' name="balkon" />
-                                Balkon
-                            </label>
-                        </div>
-
-                        <h4>Duljina vlasi</h4>
-                        <div className="leftoright">
-                            <label for="balkon">
-                                <input type='checkbox' name="balkon" />
-                                Balkon
-                            </label>
-                            <label for="balkon">
-                                <input type='checkbox' name="balkon" />
-                                Balkon
-                            </label>
-                        </div>
-                        <div className="buttons">
-                            <FormButton text={"Primjeni"} />
-                            <FormButtonSecondary text={"Resetiraj"} />
-                        </div>
-                    </form>
-                </div>
-
+                <FilterBar isModal={isModalOpen} setModal={setModalOpen} />
             </div>
-
-            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-                <div className="filterbar">
-                    <h3>Filtriraj Proizvode</h3>
-                    <form>
-                        <div className="leftoright">
-                            <label for="debljina 32mm">
-                                <input type='checkbox' name="debljina 32mm" />
-                                Debljina 32mm <span>(2)</span>
-                            </label>
-                            <label for="debljina 42mm">
-                                <input type='checkbox' name="debljina 42mm" />
-                                Debljina 42mm <span>(3)</span>
-                            </label>
-                        </div>
-
-                        <h4>Namjena</h4>
-                        <div className="leftoright">
-                            <label for="Vrt">
-                                <input type='checkbox' name="Vrt" />
-                                Vrt
-                            </label>
-                            <label for="Igralište">
-                                <input type='checkbox' name="Igralište" />
-                                Igralište
-                            </label>
-                            <label for="balkon">
-                                <input type='checkbox' name="balkon" />
-                                Balkon
-                            </label>
-                        </div>
-
-                        <h4>Duljina vlasi</h4>
-                        <div className="leftoright">
-                            <label for="balkon">
-                                <input type='checkbox' name="balkon" />
-                                Balkon
-                            </label>
-                            <label for="balkon">
-                                <input type='checkbox' name="balkon" />
-                                Balkon
-                            </label>
-                        </div>
-                        <div className="buttons">
-                            <FormButton text={"Primjeni"} />
-                            <FormButtonSecondary text={"Resetiraj"} />
-                        </div>
-                    </form>
-                </div>
-            </Modal>
         </>
     )
 }
