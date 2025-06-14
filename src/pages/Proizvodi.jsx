@@ -9,8 +9,8 @@ const Proizvodi = () => {
     return (
         <>
             <ProizvodiHero />
-            <Kvalifikacije />
             <ProizvodiListing />
+            <Kvalifikacije />
             <Newsletter />
         </>
     )
