@@ -8,9 +8,7 @@
   --tetriary-color: #F0F8F4;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 * {
   margin: 0;

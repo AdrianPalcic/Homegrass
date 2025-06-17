@@ -9,12 +9,14 @@ import Projekti from "./pages/Projekti"
 import Projekt from "./pages/Projekt"
 import Navbar from "./components/navigation/Navbar"
 import Footer from "./components/global/Footer"
+import ScrollToTop from "./utils/ScrollToTop"
 
 function App() {
 
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path={"/"} element={<Naslovna />} />
