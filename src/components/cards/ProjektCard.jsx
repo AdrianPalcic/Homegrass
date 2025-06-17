@@ -7,7 +7,7 @@ const ProjektCard = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/projekti')
+        navigate('/projekt/id')
     }
 
 

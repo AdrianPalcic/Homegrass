@@ -1,14 +1,13 @@
 import React from 'react'
 
-const AlatCard = () => {
+const AlatCard = ({ naziv, src }) => {
     return (
         <div className="alat-card">
             <div className="image">
-                <img src="/tool.png" alt="Prikaz alata za samostalno postavljanje umjetne trave" />
+                <img src={src} alt="Prikaz alata za samostalno postavljanje umjetne trave" />
             </div>
             <div className="opis">
-                <h3>Alat 1</h3>
-                <p>Potencijali opis alata</p>
+                <h3>{naziv}</h3>
             </div>
         </div>
     )

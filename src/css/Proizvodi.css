@@ -148,9 +148,6 @@
         margin-top: 0;
     }
 
-    .proizvodi-listing {
-        padding: 0 10px;
-    }
 
     .proizvodi-hero .proizvodi-hero-left h2 {
         margin-top: 20px;
@@ -159,6 +156,10 @@
 
     .proizvodi-hero .proizvodi-hero-left h2 {
         font-size: 30px;
+    }
+
+    .proizvodi-listing {
+        padding: 0 10px;
     }
 
     .proizvodi-listing .section-tt h3 {
