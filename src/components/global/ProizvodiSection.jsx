@@ -47,6 +47,12 @@ const Proizvodi = ({ proizvodPage }) => {
         },
     ]
 
+
+    const shortenText = (text, maxLength = 120) => {
+        return text.length > maxLength ? text.slice(0, maxLength).trim() + "..." : text;
+    };
+
+
     return (
 
         <div className="proizvodi-container">
@@ -70,7 +76,7 @@ const Proizvodi = ({ proizvodPage }) => {
                     dummyProizvodi.map((p) => (
                         <ProizvodCard key={p.id}
                             naziv={p.naziv}
-                            opis={p.opis}
+                            opis={shortenText(p.opis)}
                             slika={p.slika}
                             alt={p.alt}
                         />

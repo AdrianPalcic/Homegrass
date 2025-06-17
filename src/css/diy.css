@@ -195,6 +195,7 @@
 
 .vodic-subtitle {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 
@@ -207,6 +208,10 @@
 .vodic .vodic-container h2 {
     color: var(--text-color);
     font-size: 24px;
+}
+
+.vodic .vodic-container h3 {
+    font-size: 18px;
 }
 
 .margin {
@@ -430,7 +435,11 @@
     }
 }
 
-
+@media (max-width: 800px) {
+    .vodic {
+        margin: 0 20px 80px 20px;
+    }
+}
 
 
 @media (max-width: 600px) {
@@ -466,10 +475,33 @@
     }
 }
 
+@media (max-width: 550px) {
+
+    .vodic .vodic-container h2,
+    .vodic .vodic-container p,
+    .vodic .vodic-container h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .vodic {
+        margin: 0 0px 80px 0px;
+    }
+
+    .vodic .vodic-container {
+        padding: 10px;
+    }
+}
+
 @media (max-width: 450px) {
     .prednosti .prednosti-card-container {
         grid-template-columns: 1fr;
         padding: 0 20px;
+    }
+
+    .vodic .vodic-container .surface-picker {
+        flex-direction: column;
     }
 
 }
