@@ -59,7 +59,7 @@
 }
 
 .proizvodi-listing .proizvodi {
-    width: 80%;
+    width: 100%;
 }
 
 .proizvodi-listing .proizvodi .proizvodi-container {
@@ -104,70 +104,7 @@
     object-fit: cover;
 }
 
-.filterbar {
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid lightgray;
-    padding: 0 10px;
-    height: fit-content;
-}
 
-.filterbar h3 {
-    color: var(--main-color);
-    font-weight: 500;
-}
-
-.filterbar form {
-    margin-top: 10px;
-}
-
-.filterbar form input[type="checkbox"] {
-    accent-color: var(--main-color);
-}
-
-.filterbar form label {
-    display: flex;
-    width: fit-content;
-    gap: 6px;
-}
-
-.filterbar form h4 {
-    margin: 10px 0;
-    font-weight: 500;
-    color: var(--text-color)
-}
-
-.filterbar form .leftoright {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    flex: 1 0 70px;
-}
-
-.filterbar form .buttons {
-    justify-content: start;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.filterbar form .buttons .form-button {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-}
-
-.filterbar form .buttons .form-button-secondary {
-    padding: 10px;
-    color: var(--main-color);
-    font-size: 16px;
-    border-radius: 6px;
-    outline: none;
-    border: 2px solid var(--main-color);
-    font-weight: 500;
-    background-color: transparent;
-}
 
 @media (max-width:1200px) {
     .proizvodi-hero {
@@ -198,15 +135,6 @@
 
     .proizvodi-listing .section-tt .icon {
         display: block;
-    }
-
-    .filterbar {
-        display: none;
-    }
-
-    .modal-overlay .modal-content .filterbar {
-        display: flex;
-        border-left: none;
     }
 }
 

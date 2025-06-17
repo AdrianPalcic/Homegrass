@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import ProizvodCard from '../cards/ProizvodCard'
-
 import { SlidersHorizontal } from 'lucide-react'
-import FilterBar from './FilterBar'
 
 const ProizvodiListing = () => {
 
@@ -75,7 +73,6 @@ const ProizvodiListing = () => {
                         }
                     </div>
                 </div>
-                <FilterBar isModal={isModalOpen} setModal={setModalOpen} />
             </div>
         </>
     )

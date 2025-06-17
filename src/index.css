@@ -193,6 +193,7 @@ h3 {
   justify-content: space-between;
   padding-right: 80px;
   margin-top: 12px;
+  flex-direction: row !important;
 }
 
 
@@ -200,6 +201,7 @@ h3 {
 .newsletter .newsletter-content .form form {
   display: flex;
   align-items: center;
+
 }
 
 .newsletter .newsletter-content .form form input {
