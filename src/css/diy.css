@@ -178,6 +178,222 @@
     margin-bottom: 20px;
 }
 
+
+
+
+
+
+
+.vodic {
+    margin: 0 80px 80px 80px;
+    font-family: "Raleway", sans-serif;
+}
+
+.vodic-title {
+    text-align: center;
+}
+
+.vodic-subtitle {
+    text-align: center;
+}
+
+
+.vodic .vodic-container {
+    background-color: var(--tetriary-color);
+    padding: 20px 40px;
+    border-radius: 12px;
+}
+
+.vodic .vodic-container h2 {
+    color: var(--text-color);
+    font-size: 24px;
+}
+
+.margin {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: rgb(147, 147, 147);
+}
+
+.vodic .vodic-container .surface-picker {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.vodic .vodic-container .surface-picker .surface {
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px;
+    transition: 0.3s ease color;
+    border-radius: 12px;
+    color: var(--text-color);
+}
+
+.vodic .vodic-container .surface-picker .surface:hover {
+    color: var(--main-color);
+}
+
+
+
+.vodic .vodic-container .surface-picker .surface.surface-active {
+    background-color: white;
+}
+
+
+.tips {
+    margin-bottom: 40px;
+    background-color: rgba(141, 210, 111, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.tips h3 {
+    color: var(--main-color);
+}
+
+
+
+
+.accordion {
+    font-family: "Raleway", sans-serif;
+}
+
+.accordion button {
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.4);
+    padding-bottom: 10px;
+}
+
+
+
+
+
+.accordion .accordion-content {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+
+}
+
+.accordion .accordion-content .accordion-step {
+    flex: 1;
+    flex-basis: 300px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.accordion .accordion-content .accordion-step img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.accordion .accordion-content .accordion-step p {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faq-accordion {
+    margin-top: 40px;
+    padding-top: 20px;
+    font-family: "Raleway", sans-serif;
+}
+
+.faq-accordion h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.faq-item {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}
+
+.faq-answer {
+    padding: 0 0 10px 0;
+    color: #444;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:1200px) {
     .DIY-hero {
         flex-direction: column;
@@ -213,6 +429,8 @@
 
     }
 }
+
+
 
 
 @media (max-width: 600px) {

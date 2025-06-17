@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../../css/kontaktform.css"
 
-import { Phone, Mail, Facebook, MapPin, User, MessageSquare, Building, Hash, Instagram } from "../../utils/Icons"
+import { Phone, Mail, Facebook, MapPin, User, MessageSquare, Building, Hash, Instagram, SquareMeter } from "../../utils/Icons"
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -12,6 +12,7 @@ const ContactForm = () => {
         city: "",
         postalCode: "",
         message: "",
+        kolicina: "",
         acceptPrivacy: false,
     });
 
@@ -111,6 +112,24 @@ const ContactForm = () => {
                                             type="tel"
                                             placeholder="+385 99 999 9999"
                                             value={formData.phone}
+                                            onChange={handleInputChange}
+                                            className="form-input"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="phone" className="form-label">
+                                        Količina (u m²)
+                                    </label>
+                                    <div className="input-wrapper">
+                                        <SquareMeter className="input-icon" />
+                                        <input
+                                            id="kolicina"
+                                            name="kolicina"
+                                            type="number"
+                                            placeholder="30 m²"
+                                            min="1"
+                                            value={formData.kolicina}
                                             onChange={handleInputChange}
                                             className="form-input"
                                         />
@@ -217,7 +236,7 @@ const ContactForm = () => {
                                     </div>
                                     <div className="contact-details">
                                         <h3 className="contact-title">Telefon</h3>
-                                        <a href='telto:0955555555' className="contact-value">+385 99 999 9999</a>
+                                        <a href='telto:+385 91 2686 803' className="contact-value">+385 91 2686 803</a>
                                         <p className="contact-subtitle">Pon-Pet: 8:00 - 17:00</p>
                                     </div>
                                 </div>
@@ -230,8 +249,8 @@ const ContactForm = () => {
                                     </div>
                                     <div className="contact-details">
                                         <h3 className="contact-title">Email</h3>
-                                        <a href="mailto:adrian.palcic@gmail.com" className="contact-value">email@example.com</a>
-                                        <p className="contact-subtitle">Odgovaramo u roku od 24h</p>
+                                        <a href="mailto:info@homegrass.hr" className="contact-value">info@homegrass.hr</a>
+                                        <p className="contact-subtitle">Odgovaramo u najkraćem roku</p>
                                     </div>
                                 </div>
 
@@ -243,7 +262,7 @@ const ContactForm = () => {
                                     </div>
                                     <div className="contact-details">
                                         <h3 className="contact-title">Lokacija</h3>
-                                        <a href='https://maps.app.goo.gl/GpmLuj8EWK47a15B6' target='_blank' className="contact-value">Huga Badalića 10000, Zagreb</a>
+                                        <a href='https://maps.app.goo.gl/BxhftaEgRvDtekNx8' target='_blank' className="contact-value">Jaruščica 5/A, Zagreb</a>
                                         <p className="contact-subtitle">Hrvatska</p>
                                     </div>
                                 </div>
@@ -282,16 +301,18 @@ const ContactForm = () => {
                             <div className="card-content">
                                 <div className="social-links">
                                     <a
-                                        href="#"
+                                        href="https://www.instagram.com/homegrass.hr/"
                                         className="social-link"
                                         aria-label="Instagram"
+                                        target='_blank'
                                     >
                                         <Instagram />
                                     </a>
                                     <a
-                                        href="#"
+                                        href="https://www.facebook.com/profile.php?id=61574146090430"
                                         className="social-link"
                                         aria-label="Facebook"
+                                        target='_blank'
                                     >
                                         <Facebook />
                                     </a>

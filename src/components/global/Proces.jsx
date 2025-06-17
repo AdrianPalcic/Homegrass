@@ -1,5 +1,4 @@
 import { FileText, Hammer, MessageCircle, Package, Ruler } from 'lucide-react'
-import React from 'react'
 
 const Proces = () => {
     return (

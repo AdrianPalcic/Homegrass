@@ -14,7 +14,7 @@ const ProjektCard = () => {
     return (
         <div className="projekt-card" onClick={handleClick}>
             <div className="image">
-                <img src="/projekt1.jpg" alt="ALT" loading='lazy' />
+                <img src="/projekt1.jpg" alt="Savršeno postavljena umjetna trava, napravite i sebi vrt iz snova sa Homegrass umjetnim travnjacima" loading='lazy' />
             </div>
             <h3>Evergreen umjetni travnjaci</h3>
             <p>Ultimate density and softness. Excellent flexibility and very high durability. An elegant artificial...</p>

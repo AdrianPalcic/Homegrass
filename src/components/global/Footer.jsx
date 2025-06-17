@@ -31,10 +31,10 @@ const Footer = () => {
             <div className='footer-social'>
                 <h3>Društvene mreže</h3>
                 <div className="socials">
-                    <Link to="/">
+                    <Link to="https://www.instagram.com/homegrass.hr/">
                         <FaInstagram className='social-icon' size={40} color='white' />
                     </Link>
-                    <Link to="/">
+                    <Link to="https://www.facebook.com/profile.php?id=61574146090430">
                         <FaFacebook className='social-icon' size={40} color='white' />
                     </Link>
                 </div>
