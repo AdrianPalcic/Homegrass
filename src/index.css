@@ -496,7 +496,7 @@ footer .footer-social .socials .social-icon:hover {
 
 @media (max-width: 760px) {
   .newsletter .newsletter-content .form {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 }
 

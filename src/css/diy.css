@@ -88,6 +88,8 @@
 
 .alat-card .opis {
     padding: 12px 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .alat-card .opis h3 {

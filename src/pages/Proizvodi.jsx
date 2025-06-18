@@ -4,6 +4,7 @@ import ProizvodiHero from '../components/proizvodi/ProizvodiHero'
 import Kvalifikacije from '../components/global/Kvalifikacije'
 import Newsletter from '../components/global/Newsletter'
 import ProizvodiListing from '../components/proizvodi/ProizvodiListing'
+import CTA from '../components/global/CTA'
 
 const Proizvodi = () => {
     return (
@@ -11,6 +12,7 @@ const Proizvodi = () => {
             <ProizvodiHero />
             <ProizvodiListing />
             <Kvalifikacije />
+            <CTA />
             <Newsletter />
         </>
     )

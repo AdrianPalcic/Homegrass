@@ -3,7 +3,7 @@
     padding: 0 60px;
     display: flex;
     gap: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     justify-content: space-between;
 
 }
@@ -17,7 +17,7 @@
 }
 
 .projekt-hero .projekt-hero-right .image {
-    width: 700px;
+    width: 100%;
 }
 
 .projekt-hero .projekt-hero-right .image img {
@@ -43,14 +43,208 @@
 
 
 
+.projekt-gallery {
+    display: grid;
+    width: 100%;
+    padding: 10px 60px;
+    margin-bottom: 80px;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    background-color: var(--tetriary-color);
+    place-items: center;
+
+}
+
+.projekt-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    height: 150px;
+    cursor: pointer;
+    transition: 0.3s ease transform;
+}
+
+.projekt-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+.projekt-challenges {
+    margin-bottom: 80px;
+    padding: 0 60px;
+    display: flex;
+}
+
+.projekt-challenges .challenge,
+.projekt-challenges .solution {
+    flex: 1;
+    padding: 10px;
+}
+
+.projekt-challenges .solution h3,
+.projekt-challenges .challenge h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.projekt-challenges .solution h2,
+.projekt-challenges .challenge h2 {
+    margin-bottom: 8px;
+}
+
+.projekt-challenges .challenge .subtext,
+.projekt-challenges .solution .subtext {
+    margin-bottom: 40px;
+}
+
+.projekt-challenges a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease color;
+}
+
+.projekt-challenges a:hover {
+    color: var(--main-color-dark);
+}
+
+
+
+.projekt-steps {
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+    margin-bottom: 80px;
+    gap: 30px;
+}
+
+
+.projekt-steps .step {
+    display: flex;
+}
+
+.projekt-steps .step.alternate {
+    flex-direction: row-reverse;
+}
+
+.projekt-steps .step .step-left,
+.projekt-steps .step .step-right {
+    flex: 1;
+}
+
+.projekt-steps .step .step-right {
+    display: flex;
+    justify-content: center;
+}
+
+.projekt-steps .step .step-right .image {
+    width: 100%;
+}
+
+.projekt-steps .step .step-right .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.projekt-steps .step .step-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projekt-steps .step .step-left.alternate {
+    align-items: end;
+}
+
+.projekt-steps .step .step-left .step-number {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.projekt-steps .step .step-left .step-number.alternate {
+    flex-direction: row-reverse;
+}
+
+.projekt-steps .step .step-left .step-number span {
+    background-color: var(--secondary-color);
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.projekt-steps .step .step-left .step-number h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.projekt-steps .step .step-left .step-text h3.alternate {
+    text-align: end;
+}
+
+.projekt-steps .step .step-left .step-text {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.projekt-steps .step .step-left .step-text h3 {
+    font-weight: 700;
+}
+
+.projekt-steps .step .step-left .step-text.alternate {
+    align-items: end;
+}
+
+.projekt-steps .step .step-left .step-text p.alternate {
+    text-align: end;
+}
 
 
 
 
+.beforeAndAfter {
+    padding: 0 60px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.beforeAndAfter h2,
+.beforeAndAfter h3 {
+    text-align: center;
+}
 
+.beforeAndAfter h3 {
+    margin-bottom: 12px;
 
+}
 
+.beforeAndAfter .image-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.beforeAndAfter .image-container .image {
+    width: 100%;
+    flex: 1;
+}
+
+.beforeAndAfter .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
@@ -76,31 +270,34 @@
     }
 }
 
+@media (max-width:800px) {
+    .projekt-challenges {
+        flex-direction: column;
+        gap: 60px;
+    }
+}
 
-@media (max-width: 600px) {
-    .proizvodi-hero .proizvodi-hero-right .image {
-        width: 100%;
+@media (max-width:700px) {
+
+    .projekt-steps .step,
+    .projekt-steps .step.alternate {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .proizvodi-hero {
-        padding: 0 10px;
-        margin-top: 0;
-    }
-
-
-    .proizvodi-hero .proizvodi-hero-left h2 {
-        margin-top: 20px;
-    }
-
-
-    .proizvodi-hero .proizvodi-hero-left h2 {
-        font-size: 30px;
+    .beforeAndAfter .image-container {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
 @media (max-width: 600px) {
     .projekt-hero .projekt-hero-right .image {
         width: 100%;
+    }
+
+    .projekt-steps {
+        padding: 0 10px;
     }
 
     .projekt-hero {
@@ -118,4 +315,46 @@
         font-size: 30px;
     }
 
+    .projekt-gallery {
+        padding: 0 10px;
+    }
+
+    .projekt-challenges {
+        padding: 0 10px;
+    }
+
+    .beforeAndAfter {
+        padding: 0 10px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .projekt-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 5px;
+    }
+
+    .projekt-steps .step .step-left .step-number,
+    .projekt-steps .step .step-left.alternate .step-number.alternate {
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .projekt-steps .step .step-left.alternate .step-number.alternate {
+        flex-direction: row;
+    }
+
+    .projekt-steps .step .step-left .step-text h3,
+    .projekt-steps .step .step-left .step-text p,
+    .projekt-steps .step .step-left.alternate .step-text.alternate h3,
+    .projekt-steps .step .step-left.alternate .step-text.alternate p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .projekt-gallery img {
+        height: 100px;
+    }
 }

@@ -19,13 +19,13 @@ const ProizvodHero = () => {
             </div>
             <div className="proizvod-hero-right">
                 <div className="image">
-                    <img src={selectedImage} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave - Elegance" />
+                    <img src={"/elegance.jpg"} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave - Elegance" />
                 </div>
                 <div className="images">
                     {
                         Object.keys(productImages).map((key, index) => (
                             <img key={index}
-                                src={productImages[key]} alt='Homegrass Elegance umjetna trava' onClick={() => setSelectedImage(productImages[key])}
+                                src={productImages[key]} alt='Homegrass Elegance umjetna trava'
                             />
                         ))
                     }
