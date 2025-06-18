@@ -30,7 +30,7 @@ const ProjektHero = () => {
                 </div>
                 <div className="projekt-hero-right">
                     <div className="image">
-                        <img src={selectedImage} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" />
+                        <img src={selectedImage} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                     </div>
                 </div>
             </div>

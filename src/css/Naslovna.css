@@ -104,7 +104,7 @@
 
 .reviews-container {
     display: flex;
-    gap: 50px;
+    gap: 20px !important;
     flex-wrap: wrap;
 }
 
@@ -125,6 +125,7 @@
 
 .reviews-container .review .text {
     margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .reviews-container .review .name {
@@ -136,8 +137,9 @@
 }
 
 .reviews-container .review .name strong {
-    color: var(--main-color);
     font-size: 16px;
+    color: var(--text-color) !important;
+    font-weight: bold;
 }
 
 .naslovna-diy {

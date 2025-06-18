@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const MySVG = () => (
+const MySVG = ({ loading }) => (
     <Link to={"/"}>
-        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="150 180 550 200" className="logo-svg">
+        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="150 180 550 200" className={`logo-svg ${loading === true ? "loading-logo" : ""}`}>
             <defs>
                 <style>{`
         .st0 {

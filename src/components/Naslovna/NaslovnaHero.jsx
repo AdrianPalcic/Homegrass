@@ -6,7 +6,7 @@ const NaslovnaHero = () => {
     return (
         <div className="naslovna-hero">
             <div className="overlay-image">
-                <img src="/hero.jpg" alt="Homegrass umjetna trava - Pogledajte više o umjetnim travnjacima" />
+                <img src="/hero.jpg" alt="Homegrass umjetna trava - Pogledajte više o umjetnim travnjacima" fetchPriority='high' />
             </div>
             <div className="naslovna-hero-content">
                 <h1>Zelenilo koje traje. <span>Kvaliteta</span> kojoj vjerujete.</h1>

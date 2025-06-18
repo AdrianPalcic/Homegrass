@@ -4,7 +4,7 @@ import React from 'react'
 const Review = () => {
     return (
 
-        <div className="review">
+        <div className="review-projekt">
             <div className="quotes">
                 <Quote />
                 <Quote />

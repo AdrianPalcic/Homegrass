@@ -11,7 +11,7 @@ const ProizvodiHero = () => {
             </div>
             <div className="proizvodi-hero-right">
                 <div className="image">
-                    <img src="/proizvodi-hero.jpg" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" />
+                    <img src="/proizvodi-hero.jpg" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                 </div>
             </div>
         </div>

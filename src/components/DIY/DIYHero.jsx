@@ -10,7 +10,7 @@ const DIYHero = () => {
             </div>
             <div className="DIY-hero-right">
                 <div className="image">
-                    <img src="/DIY-hero.png" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" loading='eager' />
+                    <img src="/DIY-hero.png" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                 </div>
             </div>
         </div>

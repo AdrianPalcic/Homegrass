@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
 import Naslovna from "./pages/Naslovna"
 import Kontakt from "./pages/Kontakt"
@@ -10,16 +11,30 @@ import Projekt from "./pages/Projekt"
 import Navbar from "./components/navigation/Navbar"
 import Footer from "./components/global/Footer"
 import ScrollToTop from "./utils/ScrollToTop"
+import LoadingScreen from "./utils/LoadingScreen"
 
 function App() {
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1200) // adjust if needed
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return (
+      <LoadingScreen />
+    )
+  }
 
   return (
     <>
       <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path={"/"} element={<Naslovna />} />
+        <Route path="/" element={<Naslovna />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/vodic" element={<DIY />} />
         <Route path="/onama" element={<ONama />} />

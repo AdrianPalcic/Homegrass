@@ -25,7 +25,7 @@ const ProizvodHero = () => {
                     {
                         Object.keys(productImages).map((key, index) => (
                             <img key={index}
-                                src={productImages[key]} alt='Homegrass Elegance umjetna trava'
+                                src={productImages[key]} alt='Homegrass Elegance umjetna trava' fetchPriority='high'
                             />
                         ))
                     }
