@@ -9,6 +9,7 @@ const ProizvodHero = () => {
         "slika1": "/elegance2.jpg",
         "slika2": "/elegance3.jpg",
         "slika3": "/elegance4.jpg",
+        "slika4": "/elegance.jpg",
     }
     return (
         <div className="proizvod-hero">
@@ -19,13 +20,13 @@ const ProizvodHero = () => {
             </div>
             <div className="proizvod-hero-right">
                 <div className="image">
-                    <img src={"/elegance.jpg"} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave - Elegance" />
+                    <img src={selectedImage} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave - Elegance" />
                 </div>
                 <div className="images">
                     {
                         Object.keys(productImages).map((key, index) => (
                             <img key={index}
-                                src={productImages[key]} alt='Homegrass Elegance umjetna trava' fetchPriority='high'
+                                src={productImages[key]} alt='Homegrass Elegance umjetna trava' onClick={() => setSelectedImage(productImages[key])}
                             />
                         ))
                     }

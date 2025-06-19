@@ -3,16 +3,8 @@ import React, { useState } from 'react'
 
 const ProjektHero = () => {
 
-    const [selectedImage, setSelectedImage] = useState("/projekt-hero.jpg")
 
 
-    const images = {
-        "slika1": "/newsletter.jpg",
-        "slika2": "/projekt-hero.jpg",
-        "slika3": "/projekt1.jpg",
-        "slika4": "/prozivod-diy-hero.jpg",
-        "slika5": "/onama-hero.jpg",
-    }
 
 
 
@@ -32,18 +24,12 @@ const ProjektHero = () => {
                 </div>
                 <div className="projekt-hero-right">
                     <div className="image">
-                        <img src={selectedImage} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
+                        <img src="/projekt-hero.jpg" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                     </div>
                 </div>
             </div>
 
-            <div className="projekt-gallery">
-                {
-                    Object.keys(images).map((key, index) => (
-                        <img key={index} src={images[key]} alt='Homegrass projekti - pogledajte kako smo prijašnje klijente ostavili zadovoljni' onClick={() => setSelectedImage(images[key])} />
-                    ))
-                }
-            </div>
+
         </>
     )
 }

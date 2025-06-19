@@ -11,26 +11,22 @@ import Projekt from "./pages/Projekt"
 import Navbar from "./components/navigation/Navbar"
 import Footer from "./components/global/Footer"
 import ScrollToTop from "./utils/ScrollToTop"
-import LoadingScreen from "./utils/LoadingScreen"
+
+import FetchCPT from "./utils/FetchCPT";
+import useCMSStore from "./store/useCMSStore"
+
 
 function App() {
-  const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1200) // adjust if needed
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (loading) {
-    return (
-      <LoadingScreen />
-    )
-  }
+  const setProizvodi = useCMSStore((state) => state.setProizvodi)
+  const setProjekti = useCMSStore((state) => state.setProjekti)
 
   return (
     <>
+      <FetchCPT endpoint="proizvod" setState={setProizvodi} />
+      <FetchCPT endpoint="projekt" setState={setProjekti} />
+
+
       <ScrollToTop />
       <Navbar />
       <Routes>

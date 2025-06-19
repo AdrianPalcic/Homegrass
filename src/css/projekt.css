@@ -3,7 +3,7 @@
     padding: 0 60px;
     display: flex;
     gap: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     justify-content: space-between;
 
 }
@@ -39,32 +39,6 @@
 
 .projekt-hero .projekt-hero-left .karakt p a:hover {
     color: var(--main-color-dark)
-}
-
-
-
-.projekt-gallery {
-    display: grid;
-    width: 100%;
-    padding: 10px 60px;
-    margin-bottom: 80px;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    background-color: var(--tetriary-color);
-    place-items: center;
-
-}
-
-.projekt-gallery img {
-    width: 100%;
-    border-radius: 12px;
-    height: 150px;
-    cursor: pointer;
-    transition: 0.3s ease transform;
-}
-
-.projekt-gallery img:hover {
-    transform: scale(1.05);
 }
 
 
