@@ -23,9 +23,9 @@ const Footer = () => {
             </div>
             <div className='footer-links'>
                 <h3>Korisno</h3>
-                <Link to="/">Česta Pitanja</Link>
-                <Link to="/">Uvjeti Korištenja</Link>
-                <Link to="/">Pravila Privatnosti</Link>
+                <Link to="/kolacici">Kolačići</Link>
+                <Link to="/uvjeti">Uvjeti Korištenja</Link>
+                <Link to="/privacy">Pravila Privatnosti</Link>
             </div>
 
             <div className='footer-social'>

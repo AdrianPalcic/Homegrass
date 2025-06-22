@@ -1,0 +1,33 @@
+.cookie-policy-page {
+    padding: 3rem 1rem;
+    color: var(--text-color);
+
+}
+
+.cookie-policy-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cookie-policy-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cookie-policy-page h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #15823E;
+}
+
+.cookie-policy-page ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.cookie-policy-page a {
+    color: #15823E;
+    text-decoration: underline;
+}

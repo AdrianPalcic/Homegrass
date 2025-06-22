@@ -15,6 +15,10 @@ import ScrollToTop from "./utils/ScrollToTop"
 import FetchCPT from "./utils/FetchCPT";
 import useCMSStore from "./store/useCMSStore"
 import Hvala from "./pages/Hvala"
+import CookieConsent from "./utils/CookieConsent"
+import Kolacici from "./pages/Kolacici"
+import TermsPage from "./pages/TermsPage"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
 
 
 function App() {
@@ -40,7 +44,13 @@ function App() {
         <Route path="/projekti" element={<Projekti />} />
         <Route path="/projekt/:id" element={<Projekt />} />
         <Route path="/hvala" element={<Hvala />} />
+        <Route path="/kolacici" element={<Kolacici />} />
+        <Route path="/uvjeti" element={<TermsPage />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+
       </Routes>
+
+      <CookieConsent />
       <Footer />
     </>
   )

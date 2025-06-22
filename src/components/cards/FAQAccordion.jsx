@@ -35,7 +35,7 @@ const FAQAccordion = () => {
     }, [openIndex]);
 
     return (
-        <div className="faq-accordion">
+        <div className="faq-accordion" id="cesta-pitanja">
             <h2>Često postavljana pitanja</h2>
             {faqs.map((item, index) => (
                 <div key={index} className="faq-item">

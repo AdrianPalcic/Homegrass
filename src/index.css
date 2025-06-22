@@ -113,6 +113,10 @@ p {
   transition: 0.3s ease;
 }
 
+a.button-primary {
+  text-decoration: none;
+}
+
 .form-button:hover {
   background-color: var(--main-color-dark);
 }
