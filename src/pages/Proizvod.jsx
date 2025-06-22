@@ -6,6 +6,7 @@ import Newsletter from "../components/global/Newsletter"
 import '../css/proizvod.css'
 import { useParams } from 'react-router-dom'
 import useCMSStore from '../store/useCMSStore'
+import { Helmet } from 'react-helmet'
 
 const Proizvod = () => {
 
@@ -73,7 +74,7 @@ const Proizvod = () => {
             <div className="proizvod-page">
                 <ProizvodHero title={title} alt={alt} opis={opis} image={featuredImage} images={images} />
                 <ProizvodSpecs karakteristike={karakteristikeArray} />
-                <ProizvodiSection proizvodPage={true} />
+                <ProizvodiSection proizvodPage={true} selectedProduct={proizvod} />
                 <ProizvodDIY />
                 <Newsletter />
             </div>

@@ -14,24 +14,24 @@ const NaslovnaReviews = ({ listing }) => {
                         <span>"</span>
                         <span>"</span>
                     </div>
-                    <p className='text'>Nakon postavljanja HomeGrass umjetne trave, naš vrt je postao omiljeno mjesto za cijelu obitelj! Nema više blata ni košnje, a travnjak uvijek izgleda savršeno zeleno. . Preporučujem svakome tko želi bezbrižno zelenilo tijekom cijele godine!</p>
-                    <p className='name'> <strong>Ana K.,</strong> Zagreb</p>
+                    <p className='text'>Nakon godina borbe s održavanjem travnjaka, odlučili smo ugraditi HomeGrass umjetnu travu i nismo požalili ni sekunde. Izgleda nevjerojatno prirodno, a vrt nam konačno izgleda uredno kroz cijelu godinu. Postavljanje je bilo brzo i profesionalno. Preporučujem svima!</p>
+                    <p className='name'> <strong>Marija K.,</strong> Zagreb</p>
                 </div>
                 <div className="review">
                     <div className='quote'>
                         <span>"</span>
                         <span>"</span>
                     </div>
-                    <p className='text'>Nakon postavljanja HomeGrass umjetne trave, naš vrt je postao omiljeno mjesto za cijelu obitelj! Nema više blata ni košnje, a travnjak uvijek izgleda savršeno zeleno. . Preporučujem svakome tko želi bezbrižno zelenilo tijekom cijele godine!</p>
-                    <p className='name'> <strong>Ana K.,</strong> Zagreb</p>
+                    <p className='text'>Imamo dvoje male djece i psa koji obožavaju biti vani. S HomeGrass travom nemamo više problema s blatom i suhim travnjakom. Meka je, sigurna i ne zahtijeva gotovo nikakvo održavanje. Svaka čast ekipi na kvaliteti i usluzi!</p>
+                    <p className='name'> <strong>Ivan M.,</strong> Zagreb</p>
                 </div>
                 <div className="review">
                     <div className='quote'>
                         <span>"</span>
                         <span>"</span>
                     </div>
-                    <p className='text'>Nakon postavljanja HomeGrass umjetne trave, naš vrt je postao omiljeno mjesto za cijelu obitelj! Nema više blata ni košnje, a travnjak uvijek izgleda savršeno zeleno. . Preporučujem svakome tko želi bezbrižno zelenilo tijekom cijele godine!</p>
-                    <p className='name'> <strong>Ana K.,</strong> Zagreb</p>
+                    <p className='text'>Stan u gradu s betonskom terasom pretvorili smo u pravo malo zeleno utočište zahvaljujući HomeGrass umjetnoj travi. Gosti stalno pitaju gdje smo je nabavili jer izgleda toliko stvarno. Veliko hvala na savjetovanju i brzoj montaži</p>
+                    <p className='name'> <strong>Ana P.,</strong> Split</p>
                 </div>
             </div>
         </div>

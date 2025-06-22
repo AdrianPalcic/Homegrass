@@ -300,3 +300,48 @@ a.contact-value {
 .social-link:hover {
     background-color: rgba(21, 130, 62, 0.9);
 }
+
+
+
+.hvala-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hvala-content {
+    background: #f0fdf4;
+    border: 2px solid #15823E;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hvala-content h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #15823E;
+}
+
+.hvala-content p {
+    margin: 0.5rem 0 1.5rem;
+    color: #444;
+}
+
+.home-button {
+    display: inline-block;
+    background-color: #15823E;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.home-button:hover {
+    background-color: #126d34;
+}

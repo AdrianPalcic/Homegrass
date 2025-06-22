@@ -2,11 +2,11 @@
 import useCMSStore from '../../store/useCMSStore';
 import ProizvodCard from '../cards/ProizvodCard'
 
-const Proizvodi = ({ proizvodPage }) => {
+const Proizvodi = ({ proizvodPage, selectedProduct }) => {
 
     const proizvodi = useCMSStore((state) => state.proizvodi)
 
-
+    const filteredProducts = proizvodi.filter(p => String(p.id) !== String(selectedProduct?.id));
 
     const shortenText = (text, maxLength = 120) => {
         return text.length > maxLength ? text.slice(0, maxLength).trim() + "..." : text;
@@ -31,23 +31,47 @@ const Proizvodi = ({ proizvodPage }) => {
                 }
             </div>
             <div className="proizvodi">
-                {proizvodi.map((p) => {
-                    const title = p.title?.rendered
-                    const opis = p.acf?.opis || ""
-                    const slika = p._embedded?.['wp:featuredmedia']?.[0]?.source_url || ""
-                    const alt = p._embedded?.['wp:featuredmedia']?.[0]?.alt_text || title || "Homegrass proizvodi - vrhunska ponuda umjetne trave"
+                {
+                    !proizvodPage ? (
+                        <>
+                            {proizvodi.map((p) => {
+                                const title = p.title?.rendered
+                                const opis = p.acf?.opis || ""
+                                const slika = p._embedded?.['wp:featuredmedia']?.[0]?.source_url || ""
+                                const alt = p._embedded?.['wp:featuredmedia']?.[0]?.alt_text || title || "Homegrass proizvodi - vrhunska ponuda umjetne trave"
 
-                    return (
-                        <ProizvodCard
-                            key={p.id}
-                            id={p.id}
-                            naziv={title}
-                            opis={shortenText(opis)}
-                            slika={slika}
-                            alt={alt}
-                        />
-                    )
-                })}
+                                return (
+                                    <ProizvodCard
+                                        key={p.id}
+                                        id={p.id}
+                                        naziv={title}
+                                        opis={shortenText(opis)}
+                                        slika={slika}
+                                        alt={alt}
+                                    />
+                                )
+                            })}
+                        </>
+                    ) : <>
+                        {filteredProducts.map((p) => {
+                            const title = p.title?.rendered
+                            const opis = p.acf?.opis || ""
+                            const slika = p._embedded?.['wp:featuredmedia']?.[0]?.source_url || ""
+                            const alt = p._embedded?.['wp:featuredmedia']?.[0]?.alt_text || title || "Homegrass proizvodi - vrhunska ponuda umjetne trave"
+
+                            return (
+                                <ProizvodCard
+                                    key={p.id}
+                                    id={p.id}
+                                    naziv={title}
+                                    opis={shortenText(opis)}
+                                    slika={slika}
+                                    alt={alt}
+                                />
+                            )
+                        })}
+                    </>
+                }
             </div>
         </div>
 

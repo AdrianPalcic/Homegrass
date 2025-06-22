@@ -14,6 +14,7 @@ import ScrollToTop from "./utils/ScrollToTop"
 
 import FetchCPT from "./utils/FetchCPT";
 import useCMSStore from "./store/useCMSStore"
+import Hvala from "./pages/Hvala"
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/proizvod/:id" element={<Proizvod />} />
         <Route path="/projekti" element={<Projekti />} />
         <Route path="/projekt/:id" element={<Projekt />} />
+        <Route path="/hvala" element={<Hvala />} />
       </Routes>
       <Footer />
     </>

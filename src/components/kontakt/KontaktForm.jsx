@@ -14,6 +14,7 @@ const ContactForm = () => {
         message: "",
         kolicina: "",
         acceptPrivacy: false,
+        website: "", // honeypot polje
     });
 
     const handleInputChange = (e) => {
@@ -26,8 +27,11 @@ const ContactForm = () => {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Form submitted:", formData);
+        if (formData.website) {
+            e.preventDefault();
+            alert("Spam detected. Form submission blocked.");
+            return;
+        }
     };
 
     return (
@@ -41,7 +45,20 @@ const ContactForm = () => {
                             <p className="card-description">Pošaljite nam poruku i kontaktiraćemo vas u najkraćem roku</p>
                         </div>
                         <div className="card-content">
-                            <form onSubmit={handleSubmit} className="form">
+                            <form action="https://formsubmit.co/adrian.palcic@gmail.com"
+                                method="POST" className="form" onSubmit={handleSubmit}>
+                                <input
+                                    type="text"
+                                    name="website"
+                                    value={formData.website}
+                                    onChange={handleInputChange}
+                                    autoComplete="off"
+                                    tabIndex="-1"
+                                    className="honeypot"
+                                    style={{ position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}
+                                />
+                                <input type="hidden" name="_next" value="http://localhost:5173/hvala" />
+
                                 <div className="form-row">
                                     <div className="form-group">
                                         <label htmlFor="firstName" className="form-label">
@@ -199,6 +216,7 @@ const ContactForm = () => {
                                         onChange={handleCheckboxChange}
                                         className="form-checkbox"
                                         required
+                                        name="acceptPrivacy"
                                     />
                                     <label htmlFor="privacy" className="checkbox-label">
                                         Prihvaćam{" "}

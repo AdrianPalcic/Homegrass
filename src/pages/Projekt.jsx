@@ -6,6 +6,7 @@ import ProjektHero from '../components/projekt/ProjektHero'
 import Review from '../components/projekt/Review'
 import '../css/projekt.css'
 import useCMSStore from '../store/useCMSStore'
+import { Helmet } from 'react-helmet'
 
 const Projekt = () => {
 
