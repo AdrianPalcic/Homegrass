@@ -1,7 +1,7 @@
 import { Quote } from 'lucide-react'
 import React from 'react'
 
-const Review = ({ recenzija, klijent }) => {
+const Review = ({ recenzija, klijent, lokacija }) => {
     return (
 
         <div className="review-projekt">
@@ -13,7 +13,7 @@ const Review = ({ recenzija, klijent }) => {
                 <p>{recenzija}</p>
             </div>
             <div className="name">
-                <h3> {klijent + ".,"}<span>Zagreb</span></h3>
+                <h3> {klijent + ".,"} <span>{lokacija}</span></h3>
             </div>
         </div>
 

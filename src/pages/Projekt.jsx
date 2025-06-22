@@ -44,10 +44,31 @@ const Projekt = () => {
 
     return (
         <>
+            <Helmet>
+                <title>{`${title} | Projekt - HomeGrass umjetna trava`}</title>
+                <meta name="description" content={`Pogledajte kako smo riješili izazove za klijenta u ${lokacija}. ${opis}`} />
+                <meta name="keywords" content={`umjetna trava, projekt ${title}, HomeGrass, ${lokacija}, rješenje, umjetni travnjak, terasa, vrt`} />
+
+                <meta property="og:title" content={`${title} | HomeGrass`} />
+                <meta property="og:description" content={`Primjena HomeGrass trave u stvarnim uvjetima - ${opis}`} />
+                <meta property="og:image" content={slika} />
+                <meta property="og:type" content="article" />
+                <meta property="og:site_name" content="HomeGrass" />
+
+                <meta name="twitter:title" content={`${title} | HomeGrass`} />
+                <meta name="twitter:description" content={`Rješenje za klijenta u ${lokacija} - ${opis}`} />
+                <meta name="twitter:image" content={slika} />
+                <meta name="twitter:card" content="summary_large_image" />
+
+                <link rel="preload" as="image" href={slika} />
+
+                {/* Canonical (ako znaš domenu) */}
+                {/* <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} /> */}
+            </Helmet>
             <ProjektHero title={title} opis={opis} slika={slika} namjena={namjena} lokacija={lokacija} proizvod={proizvodNaslov} proizvodId={proizvodId} />
             <ProjektChallenges zelja={zelja} rjesenje={rjesenje} izazovi={izazoviArray} rjesenja={rjesenjaArray} />
             <BeforeAndAfter poslije={poslije} prije={prije} />
-            <Review recenzija={review} klijent={klijent} />
+            <Review recenzija={review} klijent={klijent} lokacija={lokacija} />
             <Newsletter />
         </>
     )

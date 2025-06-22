@@ -8,6 +8,8 @@ import { useParams } from 'react-router-dom'
 import useCMSStore from '../store/useCMSStore'
 
 const Proizvod = () => {
+
+
     const { id } = useParams();
     const proizvodi = useCMSStore((state) => state.proizvodi);
     const proizvod = proizvodi.find(p => String(p.id) === id);
@@ -44,13 +46,38 @@ const Proizvod = () => {
 
 
     return (
-        <div className="proizvod-page">
-            <ProizvodHero title={title} alt={alt} opis={opis} image={featuredImage} images={images} />
-            <ProizvodSpecs karakteristike={karakteristikeArray} />
-            <ProizvodiSection proizvodPage={true} />
-            <ProizvodDIY />
-            <Newsletter />
-        </div>
+        <>
+            <Helmet>
+                <title>{`${title} | HomeGrass - Umjetna trava`}</title>
+                <meta name="description" content={opis} />
+                <meta name="keywords" content="umjetna trava, {title}, HomeGrass, umjetna trava za vrt, terasa, sportska podloga" />
+
+                <meta property="og:title" content={`${title} | HomeGrass`} />
+                <meta property="og:description" content={opis} />
+                <meta property="og:image" content={featuredImage} />
+                <meta property="og:type" content="product" />
+                <meta property="og:site_name" content="HomeGrass" />
+
+                <meta name="twitter:title" content={`${title} | HomeGrass`} />
+                <meta name="twitter:description" content={opis} />
+                <meta name="twitter:image" content={featuredImage} />
+                <meta name="twitter:card" content="summary_large_image" />
+
+                <link rel="preload" as="image" href={featuredImage} />
+
+                {/* (Opcionalno) Canonical URL ako znaš domenu */}
+                {/* <link rel="canonical" href={`https://homegrass.hr/proizvod/${id}`} /> */}
+            </Helmet>
+
+
+            <div className="proizvod-page">
+                <ProizvodHero title={title} alt={alt} opis={opis} image={featuredImage} images={images} />
+                <ProizvodSpecs karakteristike={karakteristikeArray} />
+                <ProizvodiSection proizvodPage={true} />
+                <ProizvodDIY />
+                <Newsletter />
+            </div>
+        </>
     )
 }
 
