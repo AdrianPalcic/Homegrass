@@ -24,7 +24,17 @@ const Proizvod = () => {
     const featuredImage = proizvod._embedded?.['wp:featuredmedia']?.[0]?.source_url || ""
     const opis = proizvod.acf?.opis || ""
     const alt = proizvod._embedded?.['wp:featuredmedia']?.[0]?.alt_text || title || "Homegrass proizvodi - vrhunska ponuda umjetne trave"
-    const karakteristike = proizvod.acf?.karakteristike || ""
+    const karakteristike = proizvod.acf?.karakteristike || "";
+
+    const karakteristikeArray = karakteristike.split(',').map(el => {
+        const [label, value] = el.split(':');
+        return {
+            label: label.trim(),
+            value: value.trim()
+        };
+    });
+
+
     const images = [
         proizvod.acf?.slika,
         proizvod.acf?.slika2,
@@ -32,10 +42,11 @@ const Proizvod = () => {
     ].filter(img => img && img.url)
 
 
+
     return (
         <div className="proizvod-page">
             <ProizvodHero title={title} alt={alt} opis={opis} image={featuredImage} images={images} />
-            <ProizvodSpecs karakteristike={karakteristike} />
+            <ProizvodSpecs karakteristike={karakteristikeArray} />
             <ProizvodiSection proizvodPage={true} />
             <ProizvodDIY />
             <Newsletter />

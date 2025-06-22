@@ -1,7 +1,7 @@
 import { Quote } from 'lucide-react'
 import React from 'react'
 
-const Review = () => {
+const Review = ({ recenzija, klijent }) => {
     return (
 
         <div className="review-projekt">
@@ -10,10 +10,10 @@ const Review = () => {
                 <Quote />
             </div>
             <div className="text">
-                <p>HomeGrass tim je premašio sva moja očekivanja! Od prvog kontakta do završetka projekta sve je prošlo glatko i profesionalno. Moj vrt sada izgleda bolje nego ikad, a održavanje je minimalno. Djeca i pas uživaju, a ja napokon imam više slobodnog vremena. Svima bih preporučila ovu uslugu!</p>
+                <p>{recenzija}</p>
             </div>
             <div className="name">
-                <h3>Martina P., <span>Zagreb</span></h3>
+                <h3> {klijent + ".,"}<span>Zagreb</span></h3>
             </div>
         </div>
 

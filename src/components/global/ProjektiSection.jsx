@@ -1,9 +1,16 @@
 
 import ProjektCard from '../cards/ProjektCard';
 import ButtonMain from '../buttons/ButtonMain';
+import useCMSStore from '../../store/useCMSStore';
 
 const projekti = ({ listing }) => {
 
+    const projekti = useCMSStore((state) => state.projekti)
+
+
+    const shortenText = (text, maxLength = 90) => {
+        return text.length > maxLength ? text.slice(0, maxLength).trim() + "..." : text;
+    };
 
     return (
         <div className="projekti-container" >
@@ -21,10 +28,22 @@ const projekti = ({ listing }) => {
 
             }
             <div className="projekti">
-                <ProjektCard />
-                <ProjektCard />
-                <ProjektCard />
-                <ProjektCard />
+                {
+                    projekti.map((p) => {
+                        const title = p.title?.rendered
+                        const opis = p.acf?.opis || ""
+                        const slika = p._embedded?.['wp:featuredmedia']?.[0]?.source_url || ""
+
+                        return (
+                            <ProjektCard
+                                key={p.id}
+                                id={p.id}
+                                title={title}
+                                opis={shortenText(opis)}
+                                slika={slika} />
+                        )
+                    })
+                }
 
             </div>
             {
