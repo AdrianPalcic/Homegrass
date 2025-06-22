@@ -23,7 +23,6 @@ const ProizvodiListing = () => {
                 <div className="proizvodi">
                     <div className="section-tt">
                         <h3>Ponuda umjetne trave</h3>
-                        <SlidersHorizontal className='icon' onClick={() => setModalOpen(true)} />
                     </div>
                     <div className="proizvodi-container">
                         {proizvodi.map((p) => {
