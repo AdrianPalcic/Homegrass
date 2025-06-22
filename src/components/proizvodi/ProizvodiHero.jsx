@@ -9,7 +9,7 @@ const ProizvodiHero = () => {
                 <link
                     rel="preload"
                     as="image"
-                    href="/proizvodi-hero.jpg"
+                    href="/proizvodi-hero.webp"
                 />
             </Helmet>
 
@@ -21,7 +21,7 @@ const ProizvodiHero = () => {
                 </div>
                 <div className="proizvodi-hero-right">
                     <div className="image">
-                        <img src="/proizvodi-hero.jpg" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
+                        <img src="/proizvodi-hero.webp" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const ProizvodDIY = () => {
             </div>
             <div className="proizvod-diy-hero-right">
                 <div className="image">
-                    <img src="/prozivod-diy-hero.jpg" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" />
+                    <img src="/prozivod-diy-hero.webp" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" />
                 </div>
             </div>
         </div>

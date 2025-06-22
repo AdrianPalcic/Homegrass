@@ -9,7 +9,7 @@ const OnamaHero = () => {
                 <link
                     rel="preload"
                     as="image"
-                    href="/onama-hero.jpg"
+                    href="/onama-hero.webp"
                 />
             </Helmet>
 
@@ -21,7 +21,7 @@ const OnamaHero = () => {
                 </div>
                 <div className="onama-hero-right">
                     <div className="image">
-                        <img src="/onama-hero.jpg" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
+                        <img src="/onama-hero.webp" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                     </div>
                 </div>
             </div>

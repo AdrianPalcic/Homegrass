@@ -17,7 +17,7 @@ const Newsletter = () => {
         <div className="newsletter">
 
             <div className="overlay-image">
-                <img src="/newsletter.jpg" alt="Prijavite se na Homegrass newsletter i primajte savjete i ponude za najbolje umjetne travnjake" />
+                <img src="/newsletter.webp" alt="Prijavite se na Homegrass newsletter i primajte savjete i ponude za najbolje umjetne travnjake" />
             </div>
             <div className="newsletter-content">
                 <h2>Prijavite se na HomeGrass newsletter i prvi saznajte novosti, popuste i korisne savjete za vaš vrt.</h2>

@@ -14,11 +14,11 @@ const Kontakt = () => {
                 <meta name="keywords" content="kontakt, HomeGrass, umjetna trava kontakt, upit, ponuda, travnjak" />
                 <meta property="og:title" content="Kontakt | HomeGrass" />
                 <meta property="og:description" content="Kontaktirajte HomeGrass stručnjake za sve što vas zanima o umjetnoj travi i uslugama." />
-                <meta property="og:image" content="/kontakt-hero.jpg" />
+                <meta property="og:image" content="/kontakt-hero.webp" />
                 <meta property="og:type" content="website" />
                 {/* <meta property="og:url" content="https://tvojadomena.hr/kontakt" />
                 <link rel="canonical" href="https://tvojadomena.hr/kontakt" /> */}
-                <link rel="preload" as="image" href="/kontakt-hero.jpg" />
+                <link rel="preload" as="image" href="/kontakt-hero.webp" />
             </Helmet>
 
             <KontaktHero />

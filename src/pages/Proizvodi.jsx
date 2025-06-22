@@ -16,11 +16,11 @@ const Proizvodi = () => {
                 <meta name="keywords" content="umjetna trava, HomeGrass, proizvodi, vrtna trava, terasa, igra, gustoća, kvaliteta" />
                 <meta property="og:title" content="HomeGrass Proizvodi – Umjetna Trava" />
                 <meta property="og:description" content="Pregledajte ponudu HomeGrass proizvoda i pronađite idealnu umjetnu travu za vaš prostor." />
-                <meta property="og:image" content="/proizvodi-hero.jpg" />
+                <meta property="og:image" content="/proizvodi-hero.webp" />
                 <meta property="og:type" content="website" />
                 {/* <meta property="og:url" content="https://tvojadomena.hr/proizvodi" />
                 <link rel="canonical" href="https://tvojadomena.hr/proizvodi" /> */}
-                <link rel="preload" as="image" href="/proizvodi-hero.jpg" />
+                <link rel="preload" as="image" href="/proizvodi-hero.webp" />
             </Helmet>
 
             <ProizvodiHero />

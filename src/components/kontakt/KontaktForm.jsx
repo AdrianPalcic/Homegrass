@@ -220,7 +220,7 @@ const ContactForm = () => {
                                     />
                                     <label htmlFor="privacy" className="checkbox-label">
                                         Prihvaćam{" "}
-                                        <a href="#" className="privacy-link">
+                                        <a href="/privacy" className="privacy-link">
                                             pravila privatnosti
                                         </a>{" "}
                                         i slažem se da se moji podaci koriste za obradu upita

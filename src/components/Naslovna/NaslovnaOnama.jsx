@@ -14,7 +14,7 @@ const NaslovnaOnama = () => {
                 </div>
                 <div className="right">
                     <div className="image">
-                        <img src="/Homegrass1.jpg" alt="Istražite najbolje umjetne travnjake u Homegrass" loading='lazy' />
+                        <img src="/Homegrass1.webp" alt="Istražite najbolje umjetne travnjake u Homegrass" loading='lazy' />
                     </div>
                 </div>
             </div>

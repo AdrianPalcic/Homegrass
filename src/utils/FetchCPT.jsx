@@ -1,10 +1,14 @@
 import { useEffect } from "react"
 
 const FetchCPT = ({ endpoint, setState }) => {
+
+    const baseUrl = import.meta.env.VITE_API_URL;
+
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`http://homegrass-backend.local/wp-json/wp/v2/${endpoint}?_embed`)
+                const res = await fetch(`${baseUrl}/${endpoint}?_embed`)
                 if (!res.ok) throw new Error(`Failed to fetch ${endpoint}`)
                 const data = await res.json()
                 setState(data);

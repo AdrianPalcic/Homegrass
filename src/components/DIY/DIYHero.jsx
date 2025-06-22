@@ -8,7 +8,7 @@ const DIYHero = () => {
                 <link
                     rel="preload"
                     as="image"
-                    href="/DIY-hero.jpg"
+                    href="/DIY-hero.webp"
                 />
             </Helmet>
 
@@ -20,7 +20,7 @@ const DIYHero = () => {
                 </div>
                 <div className="DIY-hero-right">
                     <div className="image">
-                        <img src="/DIY-hero.png" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
+                        <img src="/DIY-hero.webp" alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                     </div>
                 </div>
             </div>

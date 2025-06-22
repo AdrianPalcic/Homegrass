@@ -4,7 +4,7 @@ const NaslovnaDIY = () => {
     return (
         <div className="naslovna-diy">
             <div className="overlay-image-cta">
-                <img src="/cta.jpg" alt="Homegrass vodič za postavljanje umjetne trave bez stručnjaka" />
+                <img src="/cta.webp" alt="Homegrass vodič za postavljanje umjetne trave bez stručnjaka" />
             </div>
             <div className="naslovna-diy-content">
                 <h2>Želite postaviti umjetnu travu bez stručnjaka?</h2>

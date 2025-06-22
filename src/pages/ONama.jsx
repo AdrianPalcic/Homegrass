@@ -18,11 +18,11 @@ const ONama = () => {
                 <meta name="keywords" content="HomeGrass, o nama, umjetna trava, stručnjaci, iskustvo, zelene površine, vrt, terasa" />
                 <meta property="og:title" content="HomeGrass - O nama" />
                 <meta property="og:description" content="Saznajte tko stoji iza HomeGrass brenda. Naš tim, misija i predanost pružanju vrhunskih rješenja za zelene površine." />
-                <meta property="og:image" content="/onama-hero.jpg" />
+                <meta property="og:image" content="/onama-hero.webp" />
                 <meta property="og:type" content="website" />
                 {/* <meta property="og:url" content="https://tvojadomena.hr/onama" />
                 <link rel="canonical" href="https://tvojadomena.hr/onama" /> */}
-                <link rel="preload" as="image" href="/onama-hero.jpg" />
+                <link rel="preload" as="image" href="/onama-hero.webp" />
             </Helmet>
 
             <OnamaHero />

@@ -4,7 +4,7 @@ const KontaktHero = () => {
     return (
         <div className="kontakt-hero">
             <div className="overlay-image">
-                <img src="/kontakt-hero.png" alt="Treba vam umjetna trava ili razmišljate o tome - Kontaktirajte Homegrass" />
+                <img src="/kontakt-hero.webp" alt="Treba vam umjetna trava ili razmišljate o tome - Kontaktirajte Homegrass" />
             </div>
             <div className="kontakt-hero-content">
                 <h1>Pošaljite nam poruku ili upit – javit ćemo se u najkraćem roku!</h1>
