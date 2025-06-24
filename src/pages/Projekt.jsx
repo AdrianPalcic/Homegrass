@@ -75,7 +75,7 @@ const Projekt = () => {
                 {/* <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} /> */}
             </Helmet>
             <ProjektHero title={title} opis={opis} slika={slika} namjena={namjena} lokacija={lokacija} proizvod={proizvodNaslov} proizvodId={proizvodId} />
-            <ProjektChallenges zelja={zelja} rjesenje={rjesenje} izazovi={izazoviArray} rjesenja={rjesenjaArray} />
+            {/* <ProjektChallenges zelja={zelja} rjesenje={rjesenje} izazovi={izazoviArray} rjesenja={rjesenjaArray} /> */}
             <BeforeAndAfter poslije={poslije} prije={prije} />
             <Testimonial text={review} name={klijent} location={lokacija} avatar={avatar} />
             <Newsletter />

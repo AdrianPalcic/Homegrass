@@ -26,13 +26,7 @@ const ContactForm = () => {
         setFormData((prev) => ({ ...prev, acceptPrivacy: e.target.checked }));
     };
 
-    const handleSubmit = (e) => {
-        if (formData.website) {
-            e.preventDefault();
-            alert("Spam detected. Form submission blocked.");
-            return;
-        }
-    };
+
 
     return (
         <div className="contact-container">
@@ -45,8 +39,8 @@ const ContactForm = () => {
                             <p className="card-description">Pošaljite nam poruku i kontaktiraćemo vas u najkraćem roku</p>
                         </div>
                         <div className="card-content">
-                            <form action="https://formsubmit.co/adrian.palcic@gmail.com"
-                                method="POST" className="form" onSubmit={handleSubmit}>
+                            <form action="https://formsubmit.co/info@homegrass.hr"
+                                method="POST" className="form" >
                                 <input
                                     type="text"
                                     name="website"
