@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ButtonMain from '../buttons/ButtonMain'
+import ProizvodButton from '../buttons/ProizvodButton';
 
 const ProizvodHero = ({ title, alt, opis, image, images }) => {
 
@@ -11,7 +11,7 @@ const ProizvodHero = ({ title, alt, opis, image, images }) => {
             <div className="proizvod-hero-left">
                 <h2>{title} - umjetna trava prirodnog izgleda </h2>
                 <h3>{opis}</h3>
-                <ButtonMain text={"Zatražite Ponudu"} link={"kontakt"} />
+                <ProizvodButton title={title} />
             </div>
             <div className="proizvod-hero-right">
                 <div className="image">

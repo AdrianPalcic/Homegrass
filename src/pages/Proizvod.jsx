@@ -23,7 +23,8 @@ const Proizvod = () => {
         );
     }
 
-    const title = proizvod.title?.rendered;
+    const rawTitle = proizvod.title?.rendered || "";
+    const title = rawTitle.replace(/<[^>]+>/g, ''); // Uklanja HTML tagove
     const featuredImage = proizvod._embedded?.['wp:featuredmedia']?.[0]?.source_url || ""
     const opis = proizvod.acf?.opis || ""
     const alt = proizvod._embedded?.['wp:featuredmedia']?.[0]?.alt_text || title || "Homegrass proizvodi - vrhunska ponuda umjetne trave"
