@@ -108,39 +108,8 @@
     flex-wrap: wrap;
 }
 
-.reviews-container .review {
-    background-color: var(--tetriary-color);
-    padding: 20px 40px;
-    border-radius: 20px;
-    flex: 1 0 300px;
-}
 
-.reviews-container .review .quote {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 30px;
-    color: var(--main-color)
-}
 
-.reviews-container .review .text {
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.reviews-container .review .name {
-    text-align: center;
-}
-
-.reviews-container .review .name {
-    font-size: 14px;
-}
-
-.reviews-container .review .name strong {
-    font-size: 16px;
-    color: var(--text-color) !important;
-    font-weight: bold;
-}
 
 .naslovna-diy {
     margin-bottom: 80px;

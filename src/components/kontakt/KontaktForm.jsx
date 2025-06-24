@@ -254,7 +254,8 @@ const ContactForm = () => {
                                     </div>
                                     <div className="contact-details">
                                         <h3 className="contact-title">Telefon</h3>
-                                        <a href='telto:+385 91 2686 803' className="contact-value">+385 91 2686 803</a>
+                                        <a href='tel:+385912686803' className="contact-value">+385 91 2686 803</a>
+
                                         <p className="contact-subtitle">Pon-Pet: 8:00 - 17:00</p>
                                     </div>
                                 </div>
@@ -268,6 +269,7 @@ const ContactForm = () => {
                                     <div className="contact-details">
                                         <h3 className="contact-title">Email</h3>
                                         <a href="mailto:info@homegrass.hr" className="contact-value">info@homegrass.hr</a>
+
                                         <p className="contact-subtitle">Odgovaramo u najkraćem roku</p>
                                     </div>
                                 </div>

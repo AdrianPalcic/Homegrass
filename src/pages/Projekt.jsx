@@ -7,6 +7,7 @@ import Review from '../components/projekt/Review'
 import '../css/projekt.css'
 import useCMSStore from '../store/useCMSStore'
 import { Helmet } from 'react-helmet'
+import Testimonial from '../components/Naslovna/Testimonial'
 
 const Projekt = () => {
 
@@ -43,6 +44,13 @@ const Projekt = () => {
     const review = projekt?.acf?.recenzija;
     const klijent = projekt?.acf?.ime_klijenta;
 
+    console.log(review)
+
+    const avatar = klijent.split(" ")
+        .map(word => word[0])
+        .join("");
+
+
     return (
         <>
             <Helmet>
@@ -69,7 +77,7 @@ const Projekt = () => {
             <ProjektHero title={title} opis={opis} slika={slika} namjena={namjena} lokacija={lokacija} proizvod={proizvodNaslov} proizvodId={proizvodId} />
             <ProjektChallenges zelja={zelja} rjesenje={rjesenje} izazovi={izazoviArray} rjesenja={rjesenjaArray} />
             <BeforeAndAfter poslije={poslije} prije={prije} />
-            <Review recenzija={review} klijent={klijent} lokacija={lokacija} />
+            <Testimonial text={review} name={klijent} location={lokacija} avatar={avatar} />
             <Newsletter />
         </>
     )

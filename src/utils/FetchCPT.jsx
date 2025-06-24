@@ -12,7 +12,6 @@ const FetchCPT = ({ endpoint, setState }) => {
                 if (!res.ok) throw new Error(`Failed to fetch ${endpoint}`)
                 const data = await res.json()
                 setState(data);
-                console.log(data);
             } catch (err) {
                 console.error(`Error fetching ${endpoint}:`, err)
             }

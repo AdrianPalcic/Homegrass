@@ -1,6 +1,29 @@
 import React from 'react'
+import Testimonial from './Testimonial'
 
 const NaslovnaReviews = ({ listing }) => {
+
+    const data = [
+        {
+            text: "Nakon godina borbe s održavanjem travnjaka, odlučili smo ugraditi HomeGrass umjetnu travu i nismo požalili ni sekunde. Izgleda nevjerojatno prirodno, a vrt nam konačno izgleda uredno kroz cijelu godinu. Postavljanje je bilo brzo i profesionalno. Preporučujem svima!",
+            name: "Marija K.",
+            location: "Zagreb",
+            avatar: "MK"
+        },
+        {
+            text: "HomeGrass je promijenio naš pogled na vrtove. Umjetna trava izgleda tako prirodno da gosti često ne primijete razliku. Održavanje je minimalno, a uživamo u zelenilu tijekom cijele godine.",
+            name: "Ivan P.",
+            location: "Split",
+            avatar: "IP"
+        },
+        {
+            text: "Kvaliteta trave je izvrsna! Instalacija je bila brza, a tim vrlo profesionalan. Sada imamo savršeno uređen vrt bez brige o održavanju.",
+            name: "Ana M.",
+            location: "Zagreb",
+            avatar: "AM"
+        }
+    ]
+
     return (
         <div className="naslovna-reviews">
             {
@@ -9,24 +32,16 @@ const NaslovnaReviews = ({ listing }) => {
                 ) : <h2>Klijenti zadovoljni svojim vrtom</h2>
             }
             <div className="reviews-container">
-                <div className="review">
-                    <div className='quote'>
-                    </div>
-                    <p className='text'>"Nakon godina borbe s održavanjem travnjaka, odlučili smo ugraditi HomeGrass umjetnu travu i nismo požalili ni sekunde. Izgleda nevjerojatno prirodno, a vrt nam konačno izgleda uredno kroz cijelu godinu. Postavljanje je bilo brzo i profesionalno. Preporučujem svima!"</p>
-                    <p className='name'> <strong>Marija K.,</strong> Zagreb</p>
-                </div>
-                <div className="review">
-                    <div className='quote'>
-                    </div>
-                    <p className='text'>"Imamo dvoje male djece i psa koji obožavaju biti vani. S HomeGrass travom nemamo više problema s blatom i suhim travnjakom. Meka je, sigurna i ne zahtijeva gotovo nikakvo održavanje. Svaka čast ekipi na kvaliteti i usluzi!"</p>
-                    <p className='name'> <strong>Ivan M.,</strong> Zagreb</p>
-                </div>
-                <div className="review">
-                    <div className='quote'>
-                    </div>
-                    <p className='text'>"Stan u gradu s betonskom terasom pretvorili smo u pravo malo zeleno utočište zahvaljujući HomeGrass umjetnoj travi. Gosti stalno pitaju gdje smo je nabavili jer izgleda toliko stvarno. Veliko hvala na savjetovanju i brzoj montaži."</p>
-                    <p className='name'> <strong>Ana P.,</strong> Split</p>
-                </div>
+                {data.map((review, index) => (
+                    <Testimonial
+                        key={index}
+                        text={review.text}
+                        name={review.name}
+                        avatar={review.avatar}
+                        location={review.location}
+                    />
+                ))}
+
             </div>
         </div>
     )
