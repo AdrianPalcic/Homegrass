@@ -5,16 +5,16 @@ import { Phone, Mail, Facebook, MapPin, User, MessageSquare, Building, Hash, Ins
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
+        ime: "",
+        prezime: "",
         email: "",
-        phone: "",
-        city: "",
-        postalCode: "",
-        message: "",
+        mobitel: "",
+        grad: "",
+        postanskiBroj: "",
+        poruka: "",
         kolicina: "",
         acceptPrivacy: false,
-        website: "", // honeypot polje
+        spam: "",
     });
 
     const handleInputChange = (e) => {
@@ -44,7 +44,7 @@ const ContactForm = () => {
                                 <input
                                     type="text"
                                     name="website"
-                                    value={formData.website}
+                                    value={formData.spam}
                                     onChange={handleInputChange}
                                     autoComplete="off"
                                     tabIndex="-1"
@@ -65,7 +65,7 @@ const ContactForm = () => {
                                                 name="firstName"
                                                 type="text"
                                                 placeholder="Vaše ime"
-                                                value={formData.firstName}
+                                                value={formData.ime}
                                                 onChange={handleInputChange}
                                                 className="form-input"
                                                 required
@@ -83,7 +83,7 @@ const ContactForm = () => {
                                                 name="lastName"
                                                 type="text"
                                                 placeholder="Vaše prezime"
-                                                value={formData.lastName}
+                                                value={formData.prezime}
                                                 onChange={handleInputChange}
                                                 className="form-input"
                                                 required
@@ -122,7 +122,7 @@ const ContactForm = () => {
                                             name="phone"
                                             type="tel"
                                             placeholder="+385 99 999 9999"
-                                            value={formData.phone}
+                                            value={formData.mobitel}
                                             onChange={handleInputChange}
                                             className="form-input"
                                         />
@@ -159,7 +159,7 @@ const ContactForm = () => {
                                                 name="city"
                                                 type="text"
                                                 placeholder="Zagreb"
-                                                value={formData.city}
+                                                value={formData.grad}
                                                 onChange={handleInputChange}
                                                 className="form-input"
                                             />
@@ -176,7 +176,7 @@ const ContactForm = () => {
                                                 name="postalCode"
                                                 type="text"
                                                 placeholder="10000"
-                                                value={formData.postalCode}
+                                                value={formData.postanskiBroj}
                                                 onChange={handleInputChange}
                                                 className="form-input"
                                             />
@@ -194,7 +194,7 @@ const ContactForm = () => {
                                             id="message"
                                             name="message"
                                             placeholder="Opišite kako vam možemo pomoći..."
-                                            value={formData.message}
+                                            value={formData.poruka}
                                             onChange={handleInputChange}
                                             className="form-textarea"
                                             required

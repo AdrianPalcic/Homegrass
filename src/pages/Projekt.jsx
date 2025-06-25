@@ -46,7 +46,7 @@ const Projekt = () => {
 
     console.log(review)
 
-    const avatar = klijent.split(" ")
+    const avatar = klijent?.split(" ")
         .map(word => word[0])
         .join("");
 
@@ -54,7 +54,7 @@ const Projekt = () => {
     return (
         <>
             <Helmet>
-                <title>{`${title} | Projekt - HomeGrass umjetna trava`}</title>
+                <title>{`Homegrass | Projekt - ${title}`}</title>
                 <meta name="description" content={`Pogledajte kako smo riješili izazove za klijenta u ${lokacija}. ${opis}`} />
                 <meta name="keywords" content={`umjetna trava, projekt ${title}, HomeGrass, ${lokacija}, rješenje, umjetni travnjak, terasa, vrt`} />
 

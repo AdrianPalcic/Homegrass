@@ -18,6 +18,7 @@
 }
 
 .proizvod-hero .proizvod-hero-right .image {
+    max-width: 700px;
     width: 700px;
 }
 
