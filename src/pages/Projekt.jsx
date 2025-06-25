@@ -50,6 +50,15 @@ const Projekt = () => {
         .map(word => word[0])
         .join("");
 
+    const images = [
+        projekt?.acf?.slika,
+        projekt?.acf?.slika2,
+        projekt?.acf?.slika3,
+        projekt?.acf?.slika4,
+        projekt?.acf?.slika5,
+        projekt?.acf?.slika6,
+    ].filter(img => img && img.url)
+
 
     return (
         <>
@@ -74,10 +83,17 @@ const Projekt = () => {
                 {/* Canonical (ako znaš domenu) */}
                 {/* <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} /> */}
             </Helmet>
-            <ProjektHero title={title} opis={opis} slika={slika} namjena={namjena} lokacija={lokacija} proizvod={proizvodNaslov} proizvodId={proizvodId} />
+            <ProjektHero title={title} opis={opis} slika={slika} namjena={namjena} lokacija={lokacija} proizvod={proizvodNaslov} proizvodId={proizvodId} images={images} />
             {/* <ProjektChallenges zelja={zelja} rjesenje={rjesenje} izazovi={izazoviArray} rjesenja={rjesenjaArray} /> */}
-            <BeforeAndAfter poslije={poslije} prije={prije} />
-            <Testimonial text={review} name={klijent} location={lokacija} avatar={avatar} />
+            {
+                prije && poslije && (
+                    <BeforeAndAfter prije={prije} poslije={poslije} />)
+            }
+            {
+                review && (
+                    <Testimonial text={review} name={klijent} location={lokacija} avatar={avatar} />
+                )
+            }
             <Newsletter />
         </>
     )

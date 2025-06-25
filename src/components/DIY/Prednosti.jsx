@@ -16,14 +16,14 @@ const Prednosti = () => {
                 </div>
                 <div className="prednosti-card">
                     <Clock className='image' />
-                    <h3>Ušteda Novca</h3>
-                    <p>Sami instalirajte i izbjegnite troškove profesionalne ugradnje.</p>
+                    <h3>Fleksibilnost</h3>
+                    <p>Radite tempom koji vama odgovara, kada god želite.</p>
                     <span>Birate vlastiti tempo i vrijeme rada.</span>
                 </div>
                 <div className="prednosti-card">
                     <Smile className='image' />
-                    <h3>Ušteda Novca</h3>
-                    <p>Sami instalirajte i izbjegnite troškove profesionalne ugradnje.</p>
+                    <h3>Osjećaj ponosa</h3>
+                    <p>Uživajte u vlastitom rezultatu i dodatno cijenite svoj zeleni prostor.</p>
                     <span>Zadovoljstvo kada sami dovršite projekt.</span>
                 </div>
             </div>

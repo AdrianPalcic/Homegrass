@@ -1,7 +1,8 @@
 
 import { Link } from 'react-router-dom'
+import ProjectGallery from './ProjectGallery'
 
-const ProjektHero = ({ title, namjena, slika, lokacija, proizvod, opis, proizvodId }) => {
+const ProjektHero = ({ title, namjena, slika, lokacija, proizvod, opis, proizvodId, images }) => {
 
 
 
@@ -28,7 +29,11 @@ const ProjektHero = ({ title, namjena, slika, lokacija, proizvod, opis, proizvod
                     </div>
                 </div>
             </div>
-
+            {
+                images && (
+                    <ProjectGallery images={images} />
+                )
+            }
 
         </>
     )

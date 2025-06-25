@@ -8,8 +8,8 @@ const BeforeAndAfter = ({ prije, poslije }) => {
             </h3>
 
             <div className="image-container">
-                <div className="image"><img loading='lazy' src={prije} alt="Prije postavljanja umjetne trave - Homegrass" /></div>
-                <div className="image"><img loading='lazy' src={poslije} alt="Poslije postavljanja umjetne trave - Homegrass" /></div>
+                <div className="image"><img loading='lazy' src={prije} alt=" postavljanje umjetne trave - Homegrass" /></div>
+                <div className="image"><img loading='lazy' src={poslije} alt=" postavljanje umjetne trave - Homegrass" /></div>
             </div>
 
             <ButtonMain text={"Transformiraj svoj prostor"} link={"kontakt"} />
