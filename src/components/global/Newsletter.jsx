@@ -1,21 +1,62 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import FormButton from '../buttons/FormButton';
 
 const Newsletter = () => {
-
     const [email, setEmail] = useState("");
-    const [isSubmitted, setIsSubmitted] = useState(false)
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState(null);
+    const [newsletter, setNewsletter] = useState(""); // honeypot
 
-    const handleSubmit = (e) => {
-        if (!email) return
-        setIsSubmitted(!isSubmitted);
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email);
-    }
+
+        if (newsletter) return; // honeypot check
+
+        if (!email) {
+            setError("Molimo unesite email.");
+            return;
+        }
+
+        // Provjera lokalno u localStorage
+        const subscribedEmails = JSON.parse(localStorage.getItem("subscribedEmails") || "[]");
+        if (subscribedEmails.includes(email)) {
+            setError("Ovaj email je već prijavljen.");
+            return;
+        }
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/adrian.palcic@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    newsletter, // honeypot polje
+                    email,
+                    _subject: "Nova prijava na HomeGrass newsletter",
+                }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Spremi email u localStorage
+                localStorage.setItem("subscribedEmails", JSON.stringify([...subscribedEmails, email]));
+
+                setIsSubmitted(true);
+                setEmail("");
+                setError(null);
+            } else {
+                setError(data.message || "Greška pri slanju.");
+            }
+        } catch {
+            setError("Greška pri slanju.");
+        }
+    };
 
     return (
         <div className="newsletter">
-
             <div className="overlay-image">
                 <img src="/newsletter.webp" alt="Prijavite se na Homegrass newsletter i primajte savjete i ponude za najbolje umjetne travnjake" />
             </div>
@@ -25,19 +66,37 @@ const Newsletter = () => {
                     <div className="form">
                         <h3>Primajte savjete i ponude</h3>
                         <form onSubmit={handleSubmit}>
-                            <input required name='email' type='email' placeholder='Vaš Email' value={email} onChange={(e) => setEmail(e.target.value)}
+                            {/* Honeypot polje - sakriveno */}
+                            <input
+                                type="text"
+                                name="newsletter"
+                                value={newsletter}
+                                onChange={(e) => setNewsletter(e.target.value)}
+                                style={{ display: "none" }}
+                                tabIndex={-1}
+                                autoComplete="off"
+                            />
+
+                            <input
+                                required
+                                name="email"
+                                type="email"
+                                placeholder="Vaš Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                             <FormButton text={"Prijava"} />
                         </form>
+                        {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
                     </div>
                 ) : (
-                    <div className='form-submitted'>
+                    <div className="form-submitted">
                         <p>Uspješna prijava! Od sada ćete primati najnovije vijesti, savjete i ponude izravno na svoj e-mail.</p>
                     </div>
                 )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Newsletter
+export default Newsletter;
