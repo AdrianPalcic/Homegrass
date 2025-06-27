@@ -87,7 +87,7 @@ const Newsletter = () => {
                             />
                             <FormButton text={"Prijava"} />
                         </form>
-                        {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
+
                     </div>
                 ) : (
                     <div className="form-submitted">
