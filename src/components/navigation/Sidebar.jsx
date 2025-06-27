@@ -27,10 +27,10 @@ const Sidebar = ({ isOpen, onClose }) => {
                 <div className="footer-social">
                     <h3>Društvene mreže</h3>
                     <div className="socials">
-                        <Link to="https://www.instagram.com/homegrass.hr/" target='_blank'>
+                        <Link aria-label='idite na Homegrass instagram profil' to="https://www.instagram.com/homegrass.hr/" target='_blank'>
                             <FaInstagram className="social-icon" size={30} />
                         </Link>
-                        <Link to="https://www.facebook.com/profile.php?id=61574146090430" target='_blank'>
+                        <Link aria-label='idite na Homegrass facebook profil' to="https://www.facebook.com/profile.php?id=61574146090430" target='_blank'>
                             <FaFacebook className="social-icon" size={30} />
                         </Link>
                     </div>
