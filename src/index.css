@@ -711,3 +711,10 @@ footer .footer-social .socials .social-icon:hover {
     padding: 10px;
   }
 }
+
+.list-element li a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 500;
+  transition: 0.3s ease;
+}

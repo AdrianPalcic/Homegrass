@@ -11,7 +11,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <div className="sidebar-header">
                     <MySVG />
-                    <button className="close-btn" onClick={onClose}>
+                    <button className="close-btn" aria-label='zatvorite-sidebar' onClick={onClose}>
                         <X size={32} />
                     </button>
                 </div>

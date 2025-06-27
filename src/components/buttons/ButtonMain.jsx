@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const ButtonMain = ({ text, link }) => {
+const ButtonMain = ({ text, link, label }) => {
 
     const navigate = useNavigate()
 
@@ -10,7 +10,7 @@ const ButtonMain = ({ text, link }) => {
     }
 
     return (
-        <div className='button-primary' onClick={handleClick}>{text}</div>
+        <div className='button-primary' onClick={handleClick} aria-label={label}>{text}</div>
     )
 }
 

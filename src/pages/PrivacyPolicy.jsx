@@ -1,81 +1,91 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import '../css/terms.css';
 
 const PrivacyPolicy = () => {
     return (
         <div className="terms-container">
-            <h1 className="terms-title">Pravila privatnosti</h1>
+            <Helmet>
+                <title>Politika privatnosti | HomeGrass - Sigurnost vaših podataka o umjetnoj travi</title>
+                <meta name="description" content="Pravila privatnosti za HomeGrass, vodećeg dobavljača umjetnih travnjaka u Hrvatskoj. Kako štitimo vaše podatke pri kupnji umjetne trave." />
+                <meta name="keywords" content="politika privatnosti, umjetna trava, HomeGrass, zaštita podataka, GDPR, umjetni travnjak" />
+                <meta property="og:title" content="Politika privatnosti | HomeGrass Umjetni Travnjaci" />
+                <meta property="og:description" content="Kako HomeGrass štiti vaše podatke pri narudžbi umjetne trave. Pročitajte našu politiku privatnosti." />
+                {/* <meta property="og:url" content="https://homegrass.hr/politika-privatnosti" />
+                <link rel="canonical" href="https://homegrass.hr/politika-privatnosti" /> */}
+            </Helmet>
+
+            <h1 className="terms-title">Politika privatnosti za kupce umjetne trave</h1>
             <p className="terms-date">Zadnje ažuriranje: 22. lipnja 2025.</p>
 
             <section>
                 <h2>1. Uvod</h2>
                 <p>
-                    Vaša privatnost nam je važna. Ova pravila privatnosti opisuju koje podatke prikupljamo, kako ih koristimo i kako ih štitimo prilikom vašeg korištenja stranice homegrass.hr.
+                    Kao vodeći dobavljač <strong>umjetnih travnjaka</strong> u Hrvatskoj, HomeGrass posvećuje posebnu pažnju zaštiti vaših osobnih podataka pri narudžbi <strong>umjetne trave</strong> i kontaktiranju putem naše stranice.
                 </p>
             </section>
 
             <section>
-                <h2>2. Koje podatke prikupljamo?</h2>
+                <h2>2. Koje podatke prikupljamo za umjetne travnjake?</h2>
                 <ul>
-                    <li>Ime i prezime</li>
-                    <li>Email adresa</li>
-                    <li>Broj telefona</li>
-                    <li>Grad i poštanski broj</li>
-                    <li>Poruka koju pošaljete putem kontakt obrasca</li>
+                    <li>Ime i prezime (za ugovor o ugradnji)</li>
+                    <li>Email adresa (za potvrdu narudžbe)</li>
+                    <li>Broj telefona (za koordinaciju montaže)</li>
+                    <li>Adresa (za izradu ponude za <strong>umjetni travnjak</strong>)</li>
+                    <li>Dimenzije površine (za proračun količine <strong>umjetne trave</strong>)</li>
                 </ul>
-                <p>Podatke prikupljamo samo kada ih dobrovoljno unesete.</p>
+                <p>Svi podaci se prikupljaju samo kada naručujete <strong>umjetni travnjak</strong> ili tražite ponudu.</p>
             </section>
 
             <section>
-                <h2>3. Kako koristimo vaše podatke?</h2>
+                <h2>3. Kako koristimo podatke za umjetne travnjake?</h2>
                 <p>Podatke koristimo isključivo za:</p>
                 <ul>
-                    <li>odgovor na vaš upit,</li>
-                    <li>pružanje traženih informacija ili usluga,</li>
-                    <li>poboljšanje korisničkog iskustva na stranici.</li>
+                    <li>Izradu personalizirane ponude za <strong>umjetnu travu</strong></li>
+                    <li>Organizaciju ugradnje <strong>travnjaka</strong></li>
+                    <li>Slanje tehničkih savjeta za održavanje</li>
                 </ul>
             </section>
 
             <section>
-                <h2>4. Kolačići i analitika</h2>
+                <h2>4. Kolačići za umjetne travnjake</h2>
                 <p>
-                    Ova stranica koristi kolačiće za osnovne funkcije i praćenje posjećenosti putem Google Analyticsa. Korištenjem stranice pristajete na upotrebu kolačića u skladu s pravilima privatnosti.
+                    Naša stranica koristi kolačiće za:
                 </p>
-                {/* <p>Google Analytics kod će biti aktiviran po aktivaciji kolačića (komentiran dok ste u lokalnom razvoju).</p> */}
-            </section>
-
-            <section>
-                <h2>5. Tko ima pristup vašim podacima?</h2>
-                <p>
-                    Vaše podatke ne prodajemo niti dijelimo s trećim stranama, osim ako je to zakonski propisano.
-                </p>
-            </section>
-
-            <section>
-                <h2>6. Koliko dugo čuvamo vaše podatke?</h2>
-                <p>
-                    Vaše podatke čuvamo samo onoliko koliko je potrebno za obradu vašeg zahtjeva, osim ako zakon ne propisuje drugačije.
-                </p>
-            </section>
-
-            <section>
-                <h2>7. Vaša prava</h2>
-                <p>Kao korisnik imate pravo na:</p>
                 <ul>
-                    <li>zatražiti pristup svojim osobnim podacima,</li>
-                    <li>zatražiti ispravak ili brisanje podataka,</li>
-                    <li>povući privolu u bilo kojem trenutku.</li>
+                    <li>Pamćenje postavki kataloga <strong>umjetne trave</strong></li>
+                    <li>Analitiku posjećenosti (Google Analytics)</li>
+                    <li>Praćenje konverzija (prvenstveno za kontakt obrasc)</li>
+                </ul>
+                <p>Možete upravljati kolačićima u postavkama preglednika.</p>
+            </section>
+
+            <section>
+                <h2>5. Sigurnost podataka o umjetnoj travi</h2>
+                <p>
+                    Svi podaci o narudžbama <strong>umjetnih travnjaka</strong> šifrirani su SSL certifikatom i pohranjeni u sigurnom okruženju.
+                </p>
+            </section>
+
+            <section>
+                <h2>6. Prava kupaca umjetne trave</h2>
+                <p>Kao korisnik usluga HomeGrass imate pravo:</p>
+                <ul>
+                    <li>Zatražiti popis svih narudžbi <strong>umjetne trave</strong></li>
+                    <li>Izbrisati podatke nakon završetka ugradnje</li>
+                    <li>Dobiti kopiju ugovora o ugradnji <strong>travnjaka</strong></li>
                 </ul>
             </section>
 
             <section>
-                <h2>8. Kontakt</h2>
-                <p>Za bilo kakva pitanja vezana za zaštitu privatnosti, kontaktirajte nas:</p>
-                <ul>
-                    <li>📧 info@homegrass.hr</li>
-                    <li>📍 Jaruščica 5/A, Zagreb</li>
-                    <li>📞 +385 91 2686 803</li>
+                <h2>7. Kontakt za zaštitu privatnosti</h2>
+                <p>Za pitanja o zaštiti podataka pri kupnji <strong>umjetne trave</strong>:</p>
+                <ul className='list-element'>
+                    <li> <a href="mailto:info@homegrass.hr">info@homegrass.hr</a></li>
+                    <li> Jaruščica 5/A, Zagreb</li>
+                    <li> <a href="tel:+385912686803">+385 91 2686 803</a></li>
                 </ul>
+                <p>Odjel za zaštitu podataka radi radnim danima 8-16h.</p>
             </section>
         </div>
     );

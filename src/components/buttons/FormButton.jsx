@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FormButton = ({ text }) => {
+const FormButton = ({ text, label }) => {
     return (
 
-        <button className='form-button' type='submit'>{text}</button>
+        <button className='form-button' type='submit' aria-label={label}>{text}</button>
 
     )
 }

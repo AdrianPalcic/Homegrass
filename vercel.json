@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/cms/:path*",
+            "destination": "https://49.12.60.2/cms/:path*"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }

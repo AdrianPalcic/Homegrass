@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FormButtonSecondary = ({ text }) => {
+const FormButtonSecondary = ({ text, label }) => {
     return (
 
-        <button className='form-button-secondary' type='submit'>{text}</button>
+        <button className='form-button-secondary' type='submit' aria-label={label}>{text}</button>
 
     )
 }

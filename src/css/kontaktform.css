@@ -345,3 +345,8 @@ a.contact-value {
 .home-button:hover {
     background-color: #126d34;
 }
+
+.additional-info a {
+    text-decoration: none;
+    color: var(--main-color);
+}
