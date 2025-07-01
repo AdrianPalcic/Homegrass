@@ -22,8 +22,8 @@ const Projekti = () => {
                 <meta property="og:description" content="Inspiracija iz stvarnog svijeta – pogledajte gdje je postavljena HomeGrass umjetna trava." />
                 <meta property="og:image" content="/projekti-hero.webp" />
                 <meta property="og:type" content="website" />
-                {/* <meta property="og:url" content="https://www.homegrass.hr/projekti" />
-                <link rel="canonical" href="https://www.homegrass.hr/projekti" /> */}
+                <meta property="og:url" content="https://www.homegrass.hr/projekti" />
+                <link rel="canonical" href="https://www.homegrass.hr/projekti" />
                 <link rel="preload" as="image" href="/projekti-hero.webp" />
             </Helmet>
 

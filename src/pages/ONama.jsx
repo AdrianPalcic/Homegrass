@@ -20,8 +20,8 @@ const ONama = () => {
                 <meta property="og:description" content="Saznajte tko stoji iza HomeGrass brenda. Naš tim, misija i predanost pružanju vrhunskih rješenja za zelene površine." />
                 <meta property="og:image" content="/onama-hero.webp" />
                 <meta property="og:type" content="website" />
-                {/* <meta property="og:url" content="https://tvojadomena.hr/onama" />
-                <link rel="canonical" href="https://tvojadomena.hr/onama" /> */}
+                <meta property="og:url" content="https://homegrass.hr/onama" />
+                <link rel="canonical" href="https://homegrass.hr/onama" />
                 <link rel="preload" as="image" href="/onama-hero.webp" />
             </Helmet>
 

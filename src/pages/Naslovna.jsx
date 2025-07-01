@@ -21,8 +21,8 @@ const Naslovna = () => {
                 <meta property="og:description" content="Savršen travnjak tijekom cijele godine. Upoznajte HomeGrass – lidera u umjetnoj travi u Hrvatskoj." />
                 <meta property="og:image" content="/hero.webp" />
                 <meta property="og:type" content="website" />
-                {/* <meta property="og:url" content="https://tvojadomena.hr/" />
-                <link rel="canonical" href="https://tvojadomena.hr/" /> */}
+                <meta property="og:url" content="https://homegrass.hr/" />
+                <link rel="canonical" href="https://homegrass.hr/" />
                 <link rel="preload" as="image" href="/hero.webp" />
             </Helmet>
 

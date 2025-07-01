@@ -78,10 +78,11 @@ const Projekt = () => {
                 <meta name="twitter:image" content={slika} />
                 <meta name="twitter:card" content="summary_large_image" />
 
+                <meta property="og:url" content={`https://homegrass.hr/projekt/${id}`} />
+                <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} />
                 <link rel="preload" as="image" href={slika} />
 
-                {/* Canonical (ako znaš domenu) */}
-                {/* <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} /> */}
+
             </Helmet>
             <ProjektHero title={title} opis={opis} slika={slika} namjena={namjena} lokacija={lokacija} proizvod={proizvodNaslov} proizvodId={proizvodId} images={images} />
             {/* <ProjektChallenges zelja={zelja} rjesenje={rjesenje} izazovi={izazoviArray} rjesenja={rjesenjaArray} /> */}
