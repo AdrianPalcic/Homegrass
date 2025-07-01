@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/cms/wp-admin/:path*",
+            "destination": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/:path*"
+        },
+        {
             "source": "/cms/:path*",
             "destination": "https://artificialgrass.hr/homegrass.hr/cms/:path*"
         },
