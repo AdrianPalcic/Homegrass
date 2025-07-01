@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/cms/:path*",
-            "destination": "https://49.12.60.2/cms/:path*"
+            "destination": "http://49.12.60.2/homegrass.hr/cms/:path*"
         },
         {
             "source": "/(.*)",
