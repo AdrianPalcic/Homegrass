@@ -12,5 +12,12 @@
             "source": "/(.*)",
             "destination": "/index.html"
         }
+    ],
+    "redirects": [
+        {
+            "source": "www.homegrass.hr",
+            "destination": "https://homegrass.hr",
+            "permanent": true
+        }
     ]
 }
