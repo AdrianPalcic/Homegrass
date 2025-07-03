@@ -1,29 +1,48 @@
 {
-    "rewrites": [
+    "version": 2,
+    "routes": [
         {
-            "source": "/cms/wp-admin/:path*",
-            "destination": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/:path*"
-        },
-        {
-            "source": "/cms/:path*",
-            "destination": "https://artificialgrass.hr/homegrass.hr/cms/:path*"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ],
-    "redirects": [
-        {
-            "source": "/:path*",
+            "src": "/:path*",
             "has": [
                 {
                     "type": "host",
                     "value": "www.homegrass.hr"
                 }
             ],
-            "destination": "https://homegrass.hr/:path*",
-            "permanent": true
+            "dest": "https://homegrass.hr/:path*",
+            "status": 301
+        },
+        {
+            "src": "/cms/wp-admin/:path*",
+            "dest": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/:path*",
+            "status": 200
+        },
+        {
+            "src": "/cms/:path*",
+            "dest": "https://artificialgrass.hr/homegrass.hr/cms/:path*",
+            "status": 200
+        },
+        {
+            "src": "/:path*",
+            "dest": "/index.html",
+            "status": 200
         }
-    ]
+    ],
+    "headers": [
+        {
+            "source": "/:path*",
+            "headers": [
+                {
+                    "key": "X-Robots-Tag",
+                    "value": "index, follow"
+                },
+                {
+                    "key": "Strict-Transport-Security",
+                    "value": "max-age=63072000; includeSubDomains; preload"
+                }
+            ]
+        }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
 }
