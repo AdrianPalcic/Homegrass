@@ -7,6 +7,10 @@
         {
             "source": "/cms/:path*",
             "destination": "https://artificialgrass.hr/homegrass.hr/cms/:path*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ],
     "redirects": [
