@@ -2,3 +2,5 @@ User-agent: *
 Disallow:
 Allow: /robots.txt
 Allow: /favicon.ico
+
+Sitemap: https://homegrass.hr/sitemap.xml
