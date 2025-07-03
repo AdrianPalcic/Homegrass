@@ -11,13 +11,6 @@ const Footer = () => {
                     <MySVG />
                     <h3>Umjetna trava vrhunske kvalitete za vaš dom, vrt ili balkon.</h3>
 
-                    <div className="company-details">
-                        <p>Artificial Grass Specialists d.o.o., Zagreb</p>
-                        <p>Upisan na Trgovačkom sudu u Zagrebu</p>
-                        <p>OIB: 16476619517</p>
-                        <p>temeljni kapital: 2.650,00EUR</p>
-                        <p>Direktor: Davor Novak</p>
-                    </div>
                 </div>
             </div>
 

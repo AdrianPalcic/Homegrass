@@ -57,6 +57,15 @@ const Kolacici = () => {
                     <p> <a href="tel:+385912686803">+385 91 2686 803</a> </p>
                     <p>Radno vrijeme: pon-pet 9-15h</p>
                 </address>
+
+
+                <div className="company-details">
+                    <p>Artificial Grass Specialists d.o.o., Zagreb</p>
+                    <p>Upisan na Trgovačkom sudu u Zagrebu</p>
+                    <p>OIB: 16476619517</p>
+                    <p>temeljni kapital: 2.650,00EUR</p>
+                    <p>Direktor: Davor Novak</p>
+                </div>
                 <p>Za tehnička pitanja o <strong>umjetnim travnjacima</strong>, koristite redovne kontakte.</p>
             </div>
         </div>

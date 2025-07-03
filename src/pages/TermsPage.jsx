@@ -70,6 +70,15 @@ const TermsPage = () => {
                     <li> Jaruščica 5/A, Zagreb</li>
                     <li> <a href="tel:+385912686803">+385 91 2686 803</a></li>
                 </ul>
+
+
+                <div className="company-details">
+                    <p>Artificial Grass Specialists d.o.o., Zagreb</p>
+                    <p>Upisan na Trgovačkom sudu u Zagrebu</p>
+                    <p>OIB: 16476619517</p>
+                    <p>temeljni kapital: 2.650,00EUR</p>
+                    <p>Direktor: Davor Novak</p>
+                </div>
                 <p>Radno vrijeme za savjete o <strong>umjetnim travnjacima</strong>: Pon-Pet 8-16h</p>
             </section>
         </div>
