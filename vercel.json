@@ -7,16 +7,18 @@
         {
             "source": "/cms/:path*",
             "destination": "https://artificialgrass.hr/homegrass.hr/cms/:path*"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
         }
     ],
     "redirects": [
         {
-            "source": "www.homegrass.hr",
-            "destination": "https://homegrass.hr",
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.homegrass.hr"
+                }
+            ],
+            "destination": "https://homegrass.hr/:path*",
             "permanent": true
         }
     ]
