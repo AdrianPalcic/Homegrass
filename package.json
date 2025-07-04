@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node src/script/generate-sitemap.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@react-hookz/web": "^25.1.1",
+    "axios": "^1.10.0",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.514.0",
     "react": "^19.1.0",

@@ -38,6 +38,8 @@ function App() {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="canonical" href="https://homegrass.hr" />
       </Helmet>
+
+
       <FetchCPT endpoint="proizvod" setState={setProizvodi} />
       <FetchCPT endpoint="projekt" setState={setProjekti} />
 
