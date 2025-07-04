@@ -20,6 +20,7 @@ body {
   font-family: "Raleway", sans-serif;
   max-width: 1700px;
   line-height: 1.6;
+  margin: 0 auto;
 }
 
 h1 {
