@@ -1,5 +1,14 @@
 {
     "version": 2,
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
+        }
+    ],
     "routes": [
         {
             "src": "/static/(.*)",
@@ -16,8 +25,7 @@
         {
             "src": "/sitemap.xml",
             "headers": {
-                "Content-Type": "application/xml",
-                "Cache-Control": "public, max-age=3600"
+                "Content-Type": "application/xml"
             }
         },
         {
@@ -29,21 +37,9 @@
             "dest": "https://artificialgrass.hr/homegrass.hr/cms/$1"
         },
         {
-            "src": "/(.*)",
+            "src": "/((?!static/|cms/|wp-admin/|sitemap.xml).*)",
             "dest": "/index.html",
             "status": 200
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/:path*",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "www.homegrass.hr"
-                }
-            ],
-            "destination": "https://homegrass.hr/:path*"
         }
     ]
 }
