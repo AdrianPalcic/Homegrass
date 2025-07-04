@@ -24,6 +24,8 @@ const Naslovna = () => {
                 <meta property="og:url" content="https://homegrass.hr/" />
                 <link rel="canonical" href="https://homegrass.hr/" />
                 <link rel="preload" as="image" href="/hero.webp" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
             </Helmet>
 
             <NaslovnaHero />

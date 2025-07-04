@@ -19,6 +19,7 @@ import CookieConsent from "./utils/CookieConsent"
 import Kolacici from "./pages/Kolacici"
 import TermsPage from "./pages/TermsPage"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
+import { Helmet } from "react-helmet"
 
 
 function App() {
@@ -28,6 +29,15 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <title>HomeGrass - Umjetna trava za svaki dom</title>
+        <meta name="description" content="HomeGrass nudi vrhunsku umjetnu travu za vrtove, terase i balkone. Bez zalijevanja, bez košnje – samo savršen travnjak kroz cijelu godinu." />
+        <meta name="keywords" content="umjetna trava, HomeGrass, trava za vrt, terasa, travnjak, bez održavanja, zelene površine" />
+        <meta property="og:title" content="HomeGrass - Umjetna trava koja traje" />
+        <meta property="og:description" content="Savršen travnjak tijekom cijele godine. Upoznajte HomeGrass – lidera u umjetnoj travi u Hrvatskoj." />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="canonical" href="https://homegrass.hr" />
+      </Helmet>
       <FetchCPT endpoint="proizvod" setState={setProizvodi} />
       <FetchCPT endpoint="projekt" setState={setProjekti} />
 
