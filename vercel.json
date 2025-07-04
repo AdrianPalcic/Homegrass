@@ -2,23 +2,6 @@
     "version": 2,
     "routes": [
         {
-            "src": "/sitemap.xml",
-            "headers": {
-                "Content-Type": "application/xml",
-                "Cache-Control": "public, max-age=3600"
-            }
-        },
-        {
-            "src": "/wp-admin/:path*",
-            "dest": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/:path*",
-            "status": 200
-        },
-        {
-            "src": "/cms/:path*",
-            "dest": "https://artificialgrass.hr/homegrass.hr/cms/:path*",
-            "status": 200
-        },
-        {
             "src": "/:path*",
             "has": [
                 {
@@ -28,6 +11,16 @@
             ],
             "dest": "https://homegrass.hr/:path*",
             "status": 301
+        },
+        {
+            "src": "/cms/wp-admin/:path*",
+            "dest": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/:path*",
+            "status": 200
+        },
+        {
+            "src": "/cms/:path*",
+            "dest": "https://artificialgrass.hr/homegrass.hr/cms/:path*",
+            "status": 200
         },
         {
             "src": "/:path*",
