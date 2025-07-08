@@ -11,8 +11,8 @@ const Kolacici = () => {
                 <meta name="keywords" content="politika kolačića, umjetna trava, HomeGrass, GDPR, postavke kolačića, umjetni travnjak" />
                 <meta property="og:title" content="Politika kolačića | HomeGrass Umjetni Travnjaci" />
                 <meta property="og:description" content="Kako HomeGrass koristi kolačiće za personalizaciju iskustva kupnje umjetne trave. Vaše mogućnosti upravljanja." />
-                <meta property="og:url" content="https://homegrass.hr/kolacici" />
-                <link rel="canonical" href="https://homegrass.hr/kolacici" />
+                <meta property="og:url" content="https://homegrass.hr/kolacici/" />
+                <link rel="canonical" href="https://homegrass.hr/kolacici/" />
             </Helmet>
 
             <div className="container">

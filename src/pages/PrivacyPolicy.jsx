@@ -11,8 +11,8 @@ const PrivacyPolicy = () => {
                 <meta name="keywords" content="politika privatnosti, umjetna trava, HomeGrass, zaštita podataka, GDPR, umjetni travnjak" />
                 <meta property="og:title" content="Politika privatnosti | HomeGrass Umjetni Travnjaci" />
                 <meta property="og:description" content="Kako HomeGrass štiti vaše podatke pri narudžbi umjetne trave. Pročitajte našu politiku privatnosti." />
-                <meta property="og:url" content="https://homegrass.hr/privacy" />
-                <link rel="canonical" href="https://homegrass.hr/privacy" />
+                <meta property="og:url" content="https://homegrass.hr/privacy/" />
+                <link rel="canonical" href="https://homegrass.hr/privacy/" />
             </Helmet>
 
             <h1 className="terms-title">Politika privatnosti za kupce umjetne trave</h1>

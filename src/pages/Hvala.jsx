@@ -11,8 +11,8 @@ const Hvala = () => {
                 <meta property="og:title" content="Hvala na povjerenju | HomeGrass Umjetni Travnjaci" />
                 <meta property="og:description" content="Zahvaljujemo na interesu za naše umjetne travnjake. Naš tim će vas kontaktirati u najkraćem roku." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://homegrass.hr/hvala" />
-                <link rel="canonical" href="https://homegrass.hr/hvala" />
+                <meta property="og:url" content="https://homegrass.hr/hvala/" />
+                <link rel="canonical" href="https://homegrass.hr/hvala/" />
             </Helmet>
 
             <div className="hvala-content">

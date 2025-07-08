@@ -78,8 +78,8 @@ const Projekt = () => {
                 <meta name="twitter:image" content={slika} />
                 <meta name="twitter:card" content="summary_large_image" />
 
-                <meta property="og:url" content={`https://homegrass.hr/projekt/${id}`} />
-                <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} />
+                <meta property="og:url" content={`https://homegrass.hr/projekt/${id}/`} />
+                <link rel="canonical" href={`https://homegrass.hr/projekt/${id}/`} />
                 <link rel="preload" as="image" href={slika} />
 
 
