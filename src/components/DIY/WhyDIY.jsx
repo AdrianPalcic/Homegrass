@@ -7,7 +7,7 @@ const WhyDIY = () => {
 
     const alati = [
         {
-            naziv: "GRS Električna Četka",
+            naziv: "Električna Četka",
             src: "/cetka PB.png",
             opis: "GRS Električna Četka je snažan i lagan električni uređaj za održavanje umjetne trave.",
         },
@@ -23,12 +23,12 @@ const WhyDIY = () => {
             opis: "Klinovi za umjetnu travu osiguravaju stabilnost i čvrstoću vaše trave. Lako se postavljaju čekićem kroz travu u podlogu",
         },
         {
-            naziv: "Ljepilo u tubi „All Season“",
+            naziv: "Ljepilo u tubi",
             src: "/ljepilo 1.jpg",
             opis: "Ljepilo za umjetnu travu je univerzalno i elastično, otporno na sve vremenske uvjete i UV zračenje. ",
         },
         {
-            naziv: "Ljepilo u tubi 2k „All Season“",
+            naziv: "Ljepilo u tubi 2k",
             src: "/ljepilo 2k.png",
             opis: "Ljepilo za umjetnu travu je univerzalno i elastično, otporno na sve vremenske uvjete i UV zračenje. ",
         },

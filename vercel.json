@@ -8,6 +8,10 @@
         {
             "source": "/cms/(.*)",
             "destination": "https://artificialgrass.hr/homegrass.hr/cms/$1"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ],
     "headers": [

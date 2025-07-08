@@ -41,7 +41,7 @@ const Vodic = () => {
                 steps: [
                     {
                         src: "/grass7.JPG",
-                        text: "Osigurajte rubove pomoću čavala dužine 16 cm, postavljenih na razmak od 30 do 50 cm."
+                        text: "Osigurajte rubove pričvršćivanjem čavlima, gdje je to moguće, ili ih zalijepite za podlogu istim ljepilom koje se koristi za spojeve."
                     }
                 ]
             },
@@ -109,7 +109,7 @@ const Vodic = () => {
                 steps: [
                     {
                         src: "/grass7.JPG",
-                        text: "Osigurajte rubove pomoću čavala dužine 16 cm, postavljenih na razmak od 30 do 50 cm."
+                        text: "Osigurajte rubove pomoću klinova za umjetnu travu, postavljenih na razmak od 30 do 50 cm."
                     }
                 ]
             },
