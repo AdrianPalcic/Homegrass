@@ -25,7 +25,7 @@ const Newsletter = () => {
         }
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/adrian.palcic@gmail.com", {
+            const response = await fetch("https://formsubmit.co/ajax/info@homegrass.hr", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
