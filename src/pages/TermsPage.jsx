@@ -11,8 +11,8 @@ const TermsPage = () => {
                 <meta name="keywords" content="uvjeti poslovanja, umjetna trava, HomeGrass, pravila kupnje, umjetni travnjak, garancija" />
                 <meta property="og:title" content="Uvjeti poslovanja | HomeGrass Umjetni Travnjaci" />
                 <meta property="og:description" content="Pravna pravila za kupnju i ugradnju umjetne trave od vodećeg dobavljača u Hrvatskoj." />
-                <meta property="og:url" content="https://homegrass.hr/uvjeti/" />
-                <link rel="canonical" href="https://homegrass.hr/uvjeti/" />
+                <meta property="og:url" content="https://homegrass.hr/uvjeti" />
+                <link rel="canonical" href="https://homegrass.hr/uvjeti" />
             </Helmet>
 
             <h1 className="terms-title">Uvjeti poslovanja za umjetne travnjake</h1>

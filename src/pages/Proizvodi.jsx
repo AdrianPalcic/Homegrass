@@ -18,8 +18,8 @@ const Proizvodi = () => {
                 <meta property="og:description" content="Pregledajte ponudu HomeGrass proizvoda i pronađite idealnu umjetnu travu za vaš prostor." />
                 <meta property="og:image" content="/proizvodi-hero.webp" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://homegrass.hr/proizvodi/" />
-                <link rel="canonical" href="https://homegrass.hr/proizvodi/" />
+                <meta property="og:url" content="https://homegrass.hr/proizvodi" />
+                <link rel="canonical" href="https://homegrass.hr/proizvodi" />
                 <link rel="preload" as="image" href="/proizvodi-hero.webp" />
             </Helmet>
 

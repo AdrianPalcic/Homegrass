@@ -66,8 +66,8 @@ const Proizvod = () => {
                 <meta name="twitter:card" content="summary_large_image" />
 
                 <link rel="preload" as="image" href={featuredImage} />
-                <meta property="og:url" content={`https://homegrass.hr/proizvod/${id}/`} />
-                <link rel="canonical" href={`https://homegrass.hr/proizvod/${id}/`} />
+                <meta property="og:url" content={`https://homegrass.hr/proizvod/${id}`} />
+                <link rel="canonical" href={`https://homegrass.hr/proizvod/${id}`} />
             </Helmet>
 
 

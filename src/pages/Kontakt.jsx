@@ -16,8 +16,8 @@ const Kontakt = () => {
                 <meta property="og:description" content="Kontaktirajte HomeGrass stručnjake za sve što vas zanima o umjetnoj travi i uslugama." />
                 <meta property="og:image" content="/kontakt-hero.webp" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://homegrass.hr/kontakt/" />
-                <link rel="canonical" href="https://homegrass.hr/kontakt/" />
+                <meta property="og:url" content="https://homegrass.hr/kontakt" />
+                <link rel="canonical" href="https://homegrass.hr/kontakt" />
                 <link rel="preload" as="image" href="/kontakt-hero.webp" />
             </Helmet>
 
