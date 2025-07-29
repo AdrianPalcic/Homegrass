@@ -18,10 +18,12 @@
 
 .proizvodi-hero .proizvodi-hero-right .image {
     width: 700px;
+    
 }
 
 .proizvodi-hero .proizvodi-hero-right .image img {
     width: 100%;
+    min-height:500px;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;

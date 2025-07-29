@@ -1,66 +1,47 @@
 .cookie-consent-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #222;
-    color: #fff;
-    padding: 15px 20px;
-    text-align: center;
-    z-index: 1000;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  text-align: center;
 }
-
-/* Paragraf s porukom */
 .cookie-consent-banner p {
-    margin: 0;
-    padding: 0;
-    flex: 1 1 auto;
-    min-width: 200px;
     color: white;
 }
 
-/* Gumb za prihvat */
-.cookie-consent-banner button {
-    padding: 8px 20px;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-    flex-shrink: 0;
-    white-space: nowrap;
+.cookie-consent-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
 }
 
-.cookie-consent-banner button:hover {
-    background-color: #45a049;
+.cookie-consent-buttons button {
+  background-color: #28a745;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-/* RESPONSIVE - za manje ekrane */
-@media (max-width: 480px) {
-    .cookie-consent-banner {
-        flex-direction: column;
-        padding: 15px;
-    }
+.cookie-consent-buttons button:nth-child(2) {
+    background:transparent;
+    border: 1px solid rgb(124, 124, 124);
+      padding: 0.6rem 1.2rem;
 
-    .cookie-consent-banner p {
-        min-width: 100%;
-        margin-bottom: 10px;
-        font-size: 13px;
-    }
+}
 
-    .cookie-consent-banner button {
-        width: 100%;
-        font-size: 15px;
-        padding: 12px 0;
-    }
+.cookie-consent-buttons a {
+  color: white;
+  text-decoration: none;
+  font-size:12px;
+
 }

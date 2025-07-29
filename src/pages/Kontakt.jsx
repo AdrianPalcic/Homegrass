@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet'
 import Newsletter from '../components/global/Newsletter'
 import KontaktForm from '../components/kontakt/KontaktForm'

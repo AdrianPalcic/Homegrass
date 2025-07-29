@@ -20,7 +20,7 @@ const Proizvodi = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://homegrass.hr/proizvodi" />
                 <link rel="canonical" href="https://homegrass.hr/proizvodi" />
-                <link rel="preload" as="image" href="/proizvodi-hero.webp" />
+                <link rel="preload" as="image" href="/hero.webp" />
             </Helmet>
 
             <ProizvodiHero />

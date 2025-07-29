@@ -18,7 +18,8 @@ const Kolacici = () => {
             <div className="container">
                 <h1>Politika kolačića za kupce umjetne trave</h1>
                 <p>Kao vodeći dobavljač <strong>umjetnih travnjaka</strong> u Hrvatskoj, HomeGrass koristi kolačiće kako bismo vam pružili najbolje iskustvo prilikom pregleda naših <strong>umjetnih trava</strong> i naručivanja usluga.</p>
-
+                <p>Možete upravljati postavkama kolačića putem našeg bannera ili podešavanjem postavki u svom pregledniku.
+                </p>
                 <h2>Što su kolačići?</h2>
                 <p>Kolačići su male datoteke koje pamte vaše postavke za <strong>katalog umjetne trave</strong>, kao što je zadnja pregledana vrsta <strong>travnjaka</strong> ili dimenzije vaše površine.</p>
 

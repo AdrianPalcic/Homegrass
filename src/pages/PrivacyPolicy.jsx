@@ -93,7 +93,8 @@ const PrivacyPolicy = () => {
                     <p>temeljni kapital: 2.650,00EUR</p>
                     <p>Direktor: Davor Novak</p>
                 </div>
-                <p>Odjel za zaštitu podataka radi radnim danima 8-16h.</p>
+                Ako želite ostvariti neko od svojih prava iz GDPR-a (npr. pristup podacima, ispravak, brisanje), javite nam se putem e-maila: info@homegrass.hr
+
             </section>
         </div>
     );
