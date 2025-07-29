@@ -25,7 +25,7 @@ const ProjektHero = ({ title, namjena, slika, lokacija, proizvod, opis, proizvod
                 </div>
                 <div className="projekt-hero-right">
                     <div className="image">
-                        <img src={slika} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
+                        <img src={slika || null} alt="Dobrodošli u Homegrass, vaš najbolji dobavljač umjetne trave" fetchPriority='high' />
                     </div>
                 </div>
             </div>

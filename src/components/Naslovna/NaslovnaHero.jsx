@@ -15,7 +15,7 @@ const NaslovnaHero = () => {
             </Helmet>
             <div className="naslovna-hero">
                 <div className="overlay-image">
-                    <img src="/hero.webp" alt="Homegrass umjetna trava - Pogledajte više o umjetnim travnjacima" fetchPriority='high' />
+                    <img src="/onama.webp" alt="Homegrass umjetna trava - Pogledajte više o umjetnim travnjacima" fetchPriority='high' />
                 </div>
                 <div className="naslovna-hero-content">
                     <h1>Zelenilo koje traje. <span>Kvaliteta</span> kojoj vjerujete.</h1>

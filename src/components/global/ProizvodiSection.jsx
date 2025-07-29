@@ -1,5 +1,6 @@
 
 import useCMSStore from '../../store/useCMSStore';
+import ButtonMain from '../buttons/ButtonMain';
 import ProizvodCard from '../cards/ProizvodCard'
 
 const Proizvodi = ({ proizvodPage, selectedProduct }) => {
@@ -73,6 +74,7 @@ const Proizvodi = ({ proizvodPage, selectedProduct }) => {
                     </>
                 }
             </div>
+            <ButtonMain link={"kontakt"} text={"Zatražite besplatnu ponudu"}  />
         </div>
 
     )

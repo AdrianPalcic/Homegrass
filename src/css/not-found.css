@@ -1,0 +1,32 @@
+.not-found {
+    margin:10px;
+    max-width:1700px;
+    width: 100dvw;
+    overflow:hidden;
+    height: 80dvh;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+
+}
+
+.not-found h1 {
+    text-align:center;
+    margin-bottom:10px;
+    color: var(--main-color);
+    font-weight:600;
+}
+.not-found p {
+    text-align: center;
+}
+
+
+
+@media (max-width:650px) {
+    .not-found h1 {
+        font-size:30px;
+    }
+}

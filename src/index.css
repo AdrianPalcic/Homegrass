@@ -249,6 +249,9 @@ a.button-primary {
   flex-direction: column;
   margin-bottom: 80px;
 }
+.proizvodi-container .button-primary {
+  align-self: center;
+}
 
 .section-title {
   display: flex;
@@ -271,6 +274,7 @@ a.button-primary {
   align-self: center;
   z-index: 6;
   gap: 16px;
+  margin-bottom:40px;
 }
 
 .proizvodi-container .proizvodi .proizvodi-card {
@@ -284,7 +288,7 @@ a.button-primary {
   padding: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: 0.3s ease;
-
+  
 }
 
 .proizvodi-container .proizvodi .proizvodi-card:hover {

@@ -20,6 +20,7 @@ import Kolacici from "./pages/Kolacici"
 import TermsPage from "./pages/TermsPage"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import { Helmet } from "react-helmet"
+import NotFound from "./pages/NotFound"
 
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
         <Route path="/kolacici" element={<Kolacici />} />
         <Route path="/uvjeti" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+
+        {/* 404 route */}
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
 

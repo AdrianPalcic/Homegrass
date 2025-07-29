@@ -14,7 +14,6 @@ const ContactForm = () => {
         poruka: "",
         kolicina: "",
         acceptPrivacy: false,
-        spam: "",
     });
 
     const handleInputChange = (e) => {
@@ -26,7 +25,11 @@ const ContactForm = () => {
         setFormData((prev) => ({ ...prev, acceptPrivacy: e.target.checked }));
     };
 
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form data:", formData);
+        // Ovdje možeš dodati svoju logiku slanja forme
+    };
 
     return (
         <div className="contact-container">
@@ -36,33 +39,18 @@ const ContactForm = () => {
                     <div className="form-card">
                         <div className="card-header">
                             <h2 className="card-title">Ispunite obrazac</h2>
-                            <p className="card-description">Pošaljite nam poruku i kontaktiraćemo vas u najkraćem roku</p>
+                            <p className="card-description">Pošaljite nam poruku i kontaktirat ćemo vas u najkraćem roku</p>
                         </div>
                         <div className="card-content">
-                            <form action="https://formsubmit.co/info@homegrass.hr"
-                                method="POST" className="form" >
-                                <input
-                                    type="text"
-                                    name="website"
-                                    value={formData.spam}
-                                    onChange={handleInputChange}
-                                    autoComplete="off"
-                                    tabIndex="-1"
-                                    className="honeypot"
-                                    style={{ position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}
-                                />
-                                <input type="hidden" name="_next" value="http://localhost:5173/hvala" />
-
+                            <form onSubmit={handleSubmit} className="form">
                                 <div className="form-row">
                                     <div className="form-group">
-                                        <label htmlFor="firstName" className="form-label">
-                                            Ime *
-                                        </label>
+                                        <label htmlFor="firstName" className="form-label">Ime *</label>
                                         <div className="input-wrapper">
                                             <User className="input-icon" />
                                             <input
                                                 id="firstName"
-                                                name="firstName"
+                                                name="ime"
                                                 type="text"
                                                 placeholder="Vaše ime"
                                                 value={formData.ime}
@@ -73,14 +61,12 @@ const ContactForm = () => {
                                         </div>
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="lastName" className="form-label">
-                                            Prezime *
-                                        </label>
+                                        <label htmlFor="lastName" className="form-label">Prezime *</label>
                                         <div className="input-wrapper">
                                             <User className="input-icon" />
                                             <input
                                                 id="lastName"
-                                                name="lastName"
+                                                name="prezime"
                                                 type="text"
                                                 placeholder="Vaše prezime"
                                                 value={formData.prezime}
@@ -93,16 +79,14 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="email" className="form-label">
-                                        Email *
-                                    </label>
+                                    <label htmlFor="email" className="form-label">Email *</label>
                                     <div className="input-wrapper">
                                         <Mail className="input-icon" />
                                         <input
                                             id="email"
                                             name="email"
                                             type="email"
-                                            placeholder="vaš@email.com"
+                                            placeholder="vas@email.com"
                                             value={formData.email}
                                             onChange={handleInputChange}
                                             className="form-input"
@@ -112,14 +96,12 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="phone" className="form-label">
-                                        Telefon
-                                    </label>
+                                    <label htmlFor="phone" className="form-label">Telefon</label>
                                     <div className="input-wrapper">
                                         <Phone className="input-icon" />
                                         <input
                                             id="phone"
-                                            name="phone"
+                                            name="mobitel"
                                             type="tel"
                                             placeholder="+385 99 999 9999"
                                             value={formData.mobitel}
@@ -128,10 +110,9 @@ const ContactForm = () => {
                                         />
                                     </div>
                                 </div>
+
                                 <div className="form-group">
-                                    <label htmlFor="phone" className="form-label">
-                                        Količina (u m²)
-                                    </label>
+                                    <label htmlFor="kolicina" className="form-label">Količina (u m²)</label>
                                     <div className="input-wrapper">
                                         <SquareMeter className="input-icon" />
                                         <input
@@ -149,14 +130,12 @@ const ContactForm = () => {
 
                                 <div className="form-row">
                                     <div className="form-group">
-                                        <label htmlFor="city" className="form-label">
-                                            Grad
-                                        </label>
+                                        <label htmlFor="city" className="form-label">Grad</label>
                                         <div className="input-wrapper">
                                             <Building className="input-icon" />
                                             <input
                                                 id="city"
-                                                name="city"
+                                                name="grad"
                                                 type="text"
                                                 placeholder="Zagreb"
                                                 value={formData.grad}
@@ -166,14 +145,12 @@ const ContactForm = () => {
                                         </div>
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="postalCode" className="form-label">
-                                            Poštanski broj
-                                        </label>
+                                        <label htmlFor="postalCode" className="form-label">Poštanski broj</label>
                                         <div className="input-wrapper">
                                             <Hash className="input-icon" />
                                             <input
                                                 id="postalCode"
-                                                name="postalCode"
+                                                name="postanskiBroj"
                                                 type="text"
                                                 placeholder="10000"
                                                 value={formData.postanskiBroj}
@@ -185,14 +162,12 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="message" className="form-label">
-                                        Vaša poruka *
-                                    </label>
+                                    <label htmlFor="message" className="form-label">Vaša poruka *</label>
                                     <div className="input-wrapper">
                                         <MessageSquare className="textarea-icon" />
                                         <textarea
                                             id="message"
-                                            name="message"
+                                            name="poruka"
                                             placeholder="Opišite kako vam možemo pomoći..."
                                             value={formData.poruka}
                                             onChange={handleInputChange}
@@ -214,9 +189,7 @@ const ContactForm = () => {
                                     />
                                     <label htmlFor="privacy" className="checkbox-label">
                                         Prihvaćam{" "}
-                                        <a href="/privacy" className="privacy-link">
-                                            pravila privatnosti
-                                        </a>{" "}
+                                        <a href="/privacy" className="privacy-link">pravila privatnosti</a>{" "}
                                         i slažem se da se moji podaci koriste za obradu upita
                                     </label>
                                 </div>
@@ -242,37 +215,29 @@ const ContactForm = () => {
                             <div className="card-content">
                                 <div className="contact-item">
                                     <div className="contact-icon-wrapper">
-                                        <div className="contact-icon">
-                                            <Phone />
-                                        </div>
+                                        <div className="contact-icon"><Phone /></div>
                                     </div>
                                     <div className="contact-details">
                                         <h3 className="contact-title">Telefon</h3>
                                         <a href='tel:+385912686803' className="contact-value">+385 91 2686 803</a>
-
                                         <p className="contact-subtitle">Pon-Pet: 8:00 - 17:00</p>
                                     </div>
                                 </div>
 
                                 <div className="contact-item">
                                     <div className="contact-icon-wrapper">
-                                        <div className="contact-icon">
-                                            <Mail />
-                                        </div>
+                                        <div className="contact-icon"><Mail /></div>
                                     </div>
                                     <div className="contact-details">
                                         <h3 className="contact-title">Email</h3>
                                         <a href="mailto:info@homegrass.hr" className="contact-value">info@homegrass.hr</a>
-
                                         <p className="contact-subtitle">Odgovaramo u najkraćem roku</p>
                                     </div>
                                 </div>
 
                                 <div className="contact-item">
                                     <div className="contact-icon-wrapper">
-                                        <div className="contact-icon">
-                                            <MapPin />
-                                        </div>
+                                        <div className="contact-icon"><MapPin /></div>
                                     </div>
                                     <div className="contact-details">
                                         <h3 className="contact-title">Lokacija</h3>
@@ -308,9 +273,7 @@ const ContactForm = () => {
                         {/* Social Media */}
                         <div className="social-card">
                             <div className="card-header">
-                                <h3 className="social-title">
-                                    Pronađite nas na društvenim mrežama
-                                </h3>
+                                <h3 className="social-title">Pronađite nas na društvenim mrežama</h3>
                             </div>
                             <div className="card-content">
                                 <div className="social-links">

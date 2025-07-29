@@ -13,28 +13,28 @@ function StatsSection() {
                 <div className="stats-grid">
                     <div className="stat-item">
                         <div className="stat-number">
-                            {inView ? <Counter target="120+" /> : 0}
+                            {inView ? <Counter target="50+" /> : 0}
                         </div>
                         <div className="stat-label">Uspješnih projekata</div>
                     </div>
 
                     <div className="stat-item">
                         <div className="stat-number">
-                            {inView ? <Counter target="10+" /> : 0}
+                            {inView ? <Counter target="8+" /> : 0}
                         </div>
                         <div className="stat-label">Godina iskustva</div>
                     </div>
 
                     <div className="stat-item">
                         <div className="stat-number">
-                            {inView ? <Counter target="200+" /> : 0}
+                            {inView ? <Counter target="80+" /> : 0}
                         </div>
                         <div className="stat-label">Zadovoljnih klijenata</div>
                     </div>
 
                     <div className="stat-item">
                         <div className="stat-number">
-                            {inView ? <Counter target="1000+m2" /> : 0}
+                            {inView ? <Counter target="6500+m2" /> : 0}
                         </div>
                         <div className="stat-label">Postavljene umjetne trave</div>
                     </div>

@@ -16,8 +16,8 @@ const ProizvodiHero = () => {
             <div className="proizvodi-hero">
                 <div className="proizvodi-hero-left">
                     <h2>HomeGrass proizvodi – kvaliteta i prirodan izgled </h2>
-                    <h3>Upoznajte se s rezultatima našeg rada! Ovdje donosimo primjere uspješno postavljenih HomeGrass travnjaka, koji su klijentima donijeli dugotrajan, bezbrižan i lijep zeleni prostor.</h3>
-                    <ButtonMain text={"Saznajte više o proizvodima"} link={"kontakt"} />
+                    <h3>HomeGrass nudi profesionalnu umjetnu travu za vrtove, terase i sportske površine. Odaberite idealan model i uživajte u savršenom zelenilu tijekom cijele godine.</h3>
+                    <ButtonMain text={"Zatražite besplatnu ponudu"} link={"kontakt"} />
                 </div>
                 <div className="proizvodi-hero-right">
                     <div className="image">

@@ -16,7 +16,7 @@ const Naslovna = () => {
             <Helmet>
                 <title>HomeGrass - Umjetna trava za svaki dom</title>
                 <meta name="description" content="HomeGrass nudi vrhunsku umjetnu travu za vrtove, terase i balkone. Bez zalijevanja, bez košnje – samo savršen travnjak kroz cijelu godinu." />
-                <meta name="keywords" content="umjetna trava, HomeGrass, trava za vrt, terasa, travnjak, bez održavanja, zelene površine" />
+                <meta name="keywords" content="umjetna trava, HomeGrass, trava za vrt, terasa, umjetni travnjak, bez održavanja, zelene površine" />
                 <meta property="og:title" content="HomeGrass - Umjetna trava koja traje" />
                 <meta property="og:description" content="Savršen travnjak tijekom cijele godine. Upoznajte HomeGrass – lidera u umjetnoj travi u Hrvatskoj." />
                 <meta property="og:image" content="/hero.webp" />
@@ -31,6 +31,7 @@ const Naslovna = () => {
             <NaslovnaHero />
             <NaslovnaOnama />
             <Proizvodi />
+            
             <Projekti />
             <NaslovnaReviews />
             <NaslovnaDIY />

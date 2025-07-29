@@ -1,13 +1,12 @@
 import { useParams } from 'react-router-dom'
 import Newsletter from '../components/global/Newsletter'
 import BeforeAndAfter from '../components/projekt/BeforeAndAfter'
-import ProjektChallenges from '../components/projekt/ProjektChallenges'
 import ProjektHero from '../components/projekt/ProjektHero'
-import Review from '../components/projekt/Review'
 import '../css/projekt.css'
 import useCMSStore from '../store/useCMSStore'
 import { Helmet } from 'react-helmet'
 import Testimonial from '../components/Naslovna/Testimonial'
+import ProizvodSpecs from '../components/Proizvod/ProizvodSpecs'
 
 const Projekt = () => {
 
@@ -22,21 +21,12 @@ const Projekt = () => {
     const namjena = projekt?.acf?.namjena || "";
     const lokacija = projekt?.acf?.lokacija || "";
     const proizvod = projekt?.acf?.proizvodi || "";
+    const proizvodi = useCMSStore((state) => state.proizvodi); 
+    const koristeniProizvod = proizvodi.find(p => p?.acf?.naziv === proizvod);
 
-    const proizvodi = useCMSStore((state) => state.proizvodi);
-    const koristeniProizvod = proizvodi.find(p => p.title.rendered === proizvod);
-
-    const proizvodNaslov = koristeniProizvod?.title.rendered;
+    const proizvodNaslov = koristeniProizvod?.acf.naziv;
     const proizvodId = koristeniProizvod?.id;
-    console.log(proizvodId)
 
-    const zelja = projekt?.acf?.opis_zelje || "";
-    const izazovi = projekt?.acf?.izazovi;
-    const izazoviArray = izazovi?.split(',').map(el => el.trim()) || [];
-
-    const rjesenje = projekt?.acf?.rjesenje || "";
-    const rjesenja = projekt?.acf?.rjesenja || "";
-    const rjesenjaArray = rjesenja?.split(",").map(el => el.trim()) || [];
 
     const poslije = projekt?.acf?.poslije.url;
     const prije = projekt?.acf?.prije.url;
@@ -44,7 +34,6 @@ const Projekt = () => {
     const review = projekt?.acf?.recenzija;
     const klijent = projekt?.acf?.ime_klijenta;
 
-    console.log(review)
 
     const avatar = klijent?.split(" ")
         .map(word => word[0])

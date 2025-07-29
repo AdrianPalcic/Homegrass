@@ -12,7 +12,7 @@ const projekti = ({ listing }) => {
         return text.length > maxLength ? text.slice(0, maxLength).trim() + "..." : text;
     };
 
-    const fewProjects = projekti.slice(0, 4);
+    const fewProjects = projekti.slice(0, 3);
 
     return (
         <div className="projekti-container" >
