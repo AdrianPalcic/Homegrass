@@ -40,7 +40,7 @@ const CookieConsent = () => {
       </p>
       <div className="cookie-consent-buttons">
         <button onClick={handleAcceptAll}>Prihvaćam sve</button>
-        <button onClick={handleRejectAll}>Odbijam</button>
+        <button onClick={handleRejectAll}>Prihvaćam samo nužne</button>
         <a href="/kolacici">Postavke</a>
       </div>
     </div>
