@@ -4,12 +4,11 @@
       "source": "https://www.homegrass.hr/(.*)",
       "destination": "https://homegrass.hr/$1",
       "permanent": true
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/cms/wp-admin/(.*)",
-      "destination": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/$1"
+      "source": "/cms/(.*)",
+      "destination": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/$1",
+      "permanent": true
     }
   ]
 }
