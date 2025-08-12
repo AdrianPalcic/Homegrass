@@ -54,6 +54,21 @@
             ],
             "destination": "https://homegrass.hr/:path*",
             "permanent": true
+        },
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "homegrass.hr"
+                },
+                {
+                    "type": "protocol",
+                    "value": "http"
+                }
+            ],
+            "destination": "https://homegrass.hr/:path*",
+            "permanent": true
         }
     ]
 }
