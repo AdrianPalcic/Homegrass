@@ -54,6 +54,11 @@
             ],
             "destination": "https://homegrass.hr/:path*",
             "permanent": true
+        },
+        {
+            "source": "/:path*",
+            "destination": "https://homegrass.hr/:path*",
+            "permanent": true
         }
     ]
 }
