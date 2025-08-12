@@ -46,17 +46,6 @@
     "redirects": [
         {
             "source": "/:path*",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "www.homegrass.hr"
-                }
-            ],
-            "destination": "https://homegrass.hr/:path*",
-            "permanent": true
-        },
-        {
-            "source": "/:path*",
             "destination": "https://homegrass.hr/:path*",
             "permanent": true
         }
