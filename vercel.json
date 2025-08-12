@@ -54,12 +54,6 @@
             ],
             "destination": "https://homegrass.hr/:path*",
             "permanent": true
-        },
-                {
-                "source": "/(.*)",
-             "destination": "https://homegrass.hr/$1",
-            "permanent": true
         }
-
     ]
 }
