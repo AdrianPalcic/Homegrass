@@ -10,7 +10,7 @@
             "destination": "https://artificialgrass.hr/homegrass.hr/cms/$1"
         },
         {
-            "source": "/(.*)",
+            "source": "/((?!cms|static|.*\\..*).*)",
             "destination": "/index.html"
         }
     ],
