@@ -1,19 +1,59 @@
 {
-  "redirects": [
-    {
-      "source": "https://www.homegrass.hr/(.*)",
-      "destination": "https://homegrass.hr/$1",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/cms/wp-admin/(.*)",
-      "destination": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/$1"
-    },
-    {
-      "source": "/cms/(.*)",
-      "destination": "https://artificialgrass.hr/homegrass.hr/cms/$1"
-    }
-  ]
+    "version": 2,
+    "rewrites": [
+        {
+            "source": "/cms/wp-admin/(.*)",
+            "destination": "https://artificialgrass.hr/homegrass.hr/cms/wp-admin/$1"
+        },
+        {
+            "source": "/cms/(.*)",
+            "destination": "https://artificialgrass.hr/homegrass.hr/cms/$1"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/static/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
+        },
+        {
+            "source": "/(.*\\.js)",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/javascript"
+                }
+            ]
+        },
+        {
+            "source": "/sitemap.xml",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/xml"
+                }
+            ]
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.homegrass.hr"
+                }
+            ],
+            "destination": "https://homegrass.hr/:path*",
+            "permanent": true
+        }
+    ]
 }
