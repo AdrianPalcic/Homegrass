@@ -61,10 +61,6 @@
                 {
                     "type": "host",
                     "value": "homegrass.hr"
-                },
-                {
-                    "type": "protocol",
-                    "value": "http"
                 }
             ],
             "destination": "https://homegrass.hr/:path*",
