@@ -1,11 +1,13 @@
 // /store/useCMSStore.js
-import { create } from "zustand"
+import { create } from "zustand";
 
 const useCMSStore = create((set) => ({
-    proizvodi: [],
-    projekti: [],
-    setProizvodi: (data) => set({ proizvodi: data }),
-    setProjekti: (data) => set({ projekti: data }),
-}))
+  proizvodi: [],
+  projekti: [],
+  blog: [],
+  setProizvodi: (data) => set({ proizvodi: data }),
+  setProjekti: (data) => set({ projekti: data }),
+  setBlog: (data) => set({ blog: data }),
+}));
 
-export default useCMSStore
+export default useCMSStore;

@@ -1,22 +1,28 @@
 import { ChevronRight } from "lucide-react";
 import React from "react";
 
-const BlogPostSmall = () => {
-  const slug = "Blog2";
+const BlogPostSmall = ({ blog }) => {
+  const image = blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
+  const slug = blog.slug;
+  const title = blog.title.rendered;
+  const cat = blog.acf.kategorija;
+  const alt = blog._embedded?.["wp:featuredmedia"]?.[0]?.alt_text;
+
+  console.log(alt);
 
   return (
     <div className="blog-post-small">
       <div className="blog-img-container">
         <a href={`/blog/${slug}`}>
-          <img src="/try.jpg" alt="Savjeti za umjetne travnjake" />
+          <img src={image} alt={alt} loading="lazy" />
         </a>
       </div>
       <div className="blog-post-content">
         <div>
           <div className="tag-container">
-            <span className="category">Kategorija</span>
+            <span className="category">{cat}</span>
           </div>
-          <h2>Naš prvi Blog Post!</h2>
+          <h2>{title}</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
             tempore earum facere quam repudiandae? Tempore deleniti quidem
