@@ -9,9 +9,9 @@ import useCMSStore from "../store/useCMSStore";
 import { Helmet } from "react-helmet";
 
 const Proizvod = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const proizvodi = useCMSStore((state) => state.proizvodi);
-  const proizvod = proizvodi.find((p) => String(p.id) === id);
+  const proizvod = proizvodi.find((p) => String(p.slug) === slug);
 
   if (!proizvod) {
     return <div className="loading">Ucitavanje...</div>;
@@ -66,9 +66,9 @@ const Proizvod = () => {
         <link rel="preload" as="image" href={featuredImage} />
         <meta
           property="og:url"
-          content={`https://homegrass.hr/proizvod/${id}`}
+          content={`https://homegrass.hr/proizvod/${slug}`}
         />
-        <link rel="canonical" href={`https://homegrass.hr/proizvod/${id}`} />
+        <link rel="canonical" href={`https://homegrass.hr/proizvod/${slug}`} />
       </Helmet>
 
       <div className="proizvod-page">

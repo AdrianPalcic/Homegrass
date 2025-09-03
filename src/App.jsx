@@ -63,9 +63,9 @@ function App() {
         <Route path="/vodic" element={<DIY />} />
         <Route path="/onama" element={<ONama />} />
         <Route path="/proizvodi" element={<Proizvodi />} />
-        <Route path="/proizvod/:id" element={<Proizvod />} />
+        <Route path="/proizvod/:slug" element={<Proizvod />} />
         <Route path="/projekti" element={<Projekti />} />
-        <Route path="/projekt/:id" element={<Projekt />} />
+        <Route path="/projekt/:slug" element={<Projekt />} />
         <Route path="/hvala" element={<Hvala />} />
         <Route path="/kolacici" element={<Kolacici />} />
         <Route path="/uvjeti" element={<TermsPage />} />

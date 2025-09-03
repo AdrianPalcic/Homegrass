@@ -6,12 +6,11 @@ import "../css/projekt.css";
 import useCMSStore from "../store/useCMSStore";
 import { Helmet } from "react-helmet";
 import Testimonial from "../components/Naslovna/Testimonial";
-import ProizvodSpecs from "../components/Proizvod/ProizvodSpecs";
 
 const Projekt = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const projekti = useCMSStore((state) => state.projekti);
-  const projekt = projekti.find((p) => String(p.id) === id);
+  const projekt = projekti.find((p) => String(p.slug) === slug);
 
   const title = projekt?.title?.rendered;
   const slika = projekt?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
@@ -77,9 +76,9 @@ const Projekt = () => {
 
         <meta
           property="og:url"
-          content={`https://homegrass.hr/projekt/${id}`}
+          content={`https://homegrass.hr/projekt/${slug}`}
         />
-        <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} />
+        <link rel="canonical" href={`https://homegrass.hr/projekt/${slug}`} />
         <link rel="preload" as="image" href={slika} />
       </Helmet>
       <ProjektHero
