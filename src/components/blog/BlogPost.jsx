@@ -3,10 +3,12 @@ import ButtonMain from "../buttons/ButtonMain";
 import { ChevronRight } from "lucide-react";
 
 const BlogPostBig = () => {
+  const slug = "Blgo1";
+
   return (
     <div className="blog-post">
       <div className="blog-img-container">
-        <a href="/blog1">
+        <a href={`/blog/${slug}`}>
           <img src="/try.jpg" alt="Savjeti za umjetne travnjake" />
         </a>
       </div>
@@ -25,7 +27,7 @@ const BlogPostBig = () => {
         </div>
 
         <div>
-          <a className="linke" href="/blog1">
+          <a className="linke" href={`/blog/${slug}`}>
             Pročitaj više <ChevronRight />
           </a>
         </div>

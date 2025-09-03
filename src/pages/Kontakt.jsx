@@ -27,11 +27,6 @@ const Kontakt = () => {
         <meta property="og:url" content="https://homegrass.hr/kontakt" />
         <link rel="canonical" href="https://homegrass.hr/kontakt" />
         <link rel="preload" as="image" href="/kontakt-hero.webp" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <KontaktHero />

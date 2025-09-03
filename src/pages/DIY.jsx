@@ -34,11 +34,6 @@ const DIY = () => {
         <meta property="og:url" content="https://homegrass.hr/vodic" />
         <link rel="canonical" href="https://homegrass.hr/vodic" />
         <link rel="preload" as="image" href="/DIY-hero.webp" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <DIYHero />

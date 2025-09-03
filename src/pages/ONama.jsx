@@ -32,11 +32,6 @@ const ONama = () => {
         <meta property="og:url" content="https://homegrass.hr/onama" />
         <link rel="canonical" href="https://homegrass.hr/onama" />
         <link rel="preload" as="image" href="/onama-hero.webp" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <OnamaHero />

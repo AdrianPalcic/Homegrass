@@ -28,11 +28,6 @@ const Kolacici = () => {
         />
         <meta property="og:url" content="https://homegrass.hr/kolacici" />
         <link rel="canonical" href="https://homegrass.hr/kolacici" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <div className="container">

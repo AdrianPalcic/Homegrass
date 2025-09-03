@@ -22,11 +22,6 @@ const Hvala = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://homegrass.hr/hvala" />
         <link rel="canonical" href="https://homegrass.hr/hvala" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <div className="hvala-content">

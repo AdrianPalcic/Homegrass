@@ -25,7 +25,7 @@ const Blog = () => {
 
       <div className="blog-posts">
         <div className="blog-posts-heading">
-          <h2>Naši blogovi</h2>
+          <h2 className="blog-h2">Naši blogovi</h2>
           <p>
             U nastavku pronađite naše najnovije članke i inspirirajte se idejama
             za umjetne travnjake.

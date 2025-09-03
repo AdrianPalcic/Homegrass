@@ -35,11 +35,6 @@ const Projekti = () => {
         <meta property="og:url" content="https://www.homegrass.hr/projekti" />
         <link rel="canonical" href="https://www.homegrass.hr/projekti" />
         <link rel="preload" as="image" href="/projekti-hero.webp" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <ProjektiHero />

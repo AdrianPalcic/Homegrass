@@ -2,10 +2,12 @@ import { ChevronRight } from "lucide-react";
 import React from "react";
 
 const BlogPostSmall = () => {
+  const slug = "Blog2";
+
   return (
     <div className="blog-post-small">
       <div className="blog-img-container">
-        <a href="/blog1">
+        <a href={`/blog/${slug}`}>
           <img src="/try.jpg" alt="Savjeti za umjetne travnjake" />
         </a>
       </div>
@@ -24,7 +26,7 @@ const BlogPostSmall = () => {
         </div>
 
         <div>
-          <a className="linke" href="/blog1">
+          <a className="linke" href={`/blog/${slug}`}>
             Pročitaj više <ChevronRight />
           </a>
         </div>

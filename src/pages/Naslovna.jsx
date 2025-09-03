@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import NaslovnaHero from "../components/Naslovna/NaslovnaHero";
 import "../css/Naslovna.css";
@@ -11,6 +11,14 @@ import CTA from "../components/global/CTA";
 import Newsletter from "../components/global/Newsletter";
 
 const Naslovna = () => {
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag("event", "conversion", {
+        send_to: "AW-16942334557/tiM4CJG1ne8aEN2E3o4_",
+      });
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -37,11 +45,6 @@ const Naslovna = () => {
         <link rel="canonical" href="https://homegrass.hr/" />
         <link rel="preload" as="image" href="/proizvodi-hero.webp" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <NaslovnaHero />

@@ -81,10 +81,6 @@ const Projekt = () => {
         />
         <link rel="canonical" href={`https://homegrass.hr/projekt/${id}`} />
         <link rel="preload" as="image" href={slika} />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
       <ProjektHero
         title={title}

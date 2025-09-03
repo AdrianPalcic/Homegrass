@@ -69,11 +69,6 @@ const Proizvod = () => {
           content={`https://homegrass.hr/proizvod/${id}`}
         />
         <link rel="canonical" href={`https://homegrass.hr/proizvod/${id}`} />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <div className="proizvod-page">

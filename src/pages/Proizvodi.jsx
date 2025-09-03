@@ -33,11 +33,6 @@ const Proizvodi = () => {
         <meta property="og:url" content="https://homegrass.hr/proizvodi" />
         <link rel="canonical" href="https://homegrass.hr/proizvodi" />
         <link rel="preload" as="image" href="/hero.webp" />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16942334557"
-        ></script>
       </Helmet>
 
       <ProizvodiHero />

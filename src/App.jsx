@@ -22,6 +22,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { Helmet } from "react-helmet";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
+import BlogPostPage from "./pages/BlogPostPage";
 
 function App() {
   const setProizvodi = useCMSStore((state) => state.setProizvodi);
@@ -70,6 +71,7 @@ function App() {
         <Route path="/uvjeti" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
 
         {/* 404 route */}
         <Route path="*" element={<NotFound />} />
