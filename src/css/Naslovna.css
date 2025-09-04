@@ -1,273 +1,266 @@
 .naslovna-hero {
-    width: 100%;
-    height: 80vh;
-    position: relative;
-    display: flex;
-    margin-bottom: 40px;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .overlay-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .overlay-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 
 .naslovna-hero .naslovna-hero-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+  margin: 0 auto;
 }
 
 .naslovna-hero .naslovna-hero-content h1,
 .naslovna-hero .naslovna-hero-content h3 {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .container {
-    display: flex;
-    padding: 0 60px;
-    justify-content: space-between;
-    gap: 50px;
-    margin-bottom: 80px;
+  display: flex;
+  padding: 0 60px;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 80px;
 }
 
 .container .left {
-    flex: 1;
-    padding: 20px 0;
+  flex: 1;
+  padding: 20px 0;
 }
 
 .container .left h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .container .left h3 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .container .right .image {
-    width: 600px;
+  width: 600px;
 }
 
 .container .right .image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .container .left button {
-    width: 200px;
+  width: 200px;
 }
 
-
-
-
 .naslovna-reviews {
-    padding: 0 60px;
-    margin-bottom: 80px;
-
+  padding: 0 60px;
+  margin-bottom: 80px;
 }
 
 .naslovna-reviews h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .naslovna-reviews h2::after {
-    content: "";
-    position: absolute;
-    left: 45%;
-    bottom: -5px;
-    height: 3px;
-    width: 10%;
-    background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
-    border-radius: 20px;
+  content: "";
+  position: absolute;
+  left: 45%;
+  bottom: -5px;
+  height: 3px;
+  width: 10%;
+  background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+  border-radius: 20px;
 }
 
 .reviews-container {
-    display: flex;
-    gap: 20px !important;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 20px !important;
+  flex-wrap: wrap;
 }
 
-
-
-
 .naslovna-diy {
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .naslovna-diy .overlay-image-cta {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .naslovna-diy .overlay-image-cta img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 
 .naslovna-diy .naslovna-diy-content {
-    z-index: 2;
-    padding: 0 100px;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  z-index: 2;
+  padding: 0 100px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .naslovna-diy .naslovna-diy-content h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 12px;
+  color: white;
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 /* Na tisuču promijeni*/
 .naslovna-diy .naslovna-diy-content h3 {
-    padding: 0 100px;
-    margin-bottom: 20px;
+  padding: 0 100px;
+  margin-bottom: 20px;
 }
 
+@media (max-width: 1050px) {
+  .naslovna-hero .naslovna-hero-content h1 {
+    font-size: 40px;
+  }
 
-@media (max-width:1050px) {
-    .naslovna-hero .naslovna-hero-content h1 {
-        font-size: 40px;
-    }
+  .naslovna-hero .naslovna-hero-content h3 {
+    padding: 0 60px;
+  }
 
-    .naslovna-hero .naslovna-hero-content h3 {
-        padding: 0 60px;
-    }
+  .container {
+    flex-direction: column;
+  }
 
-    .container {
-        flex-direction: column;
-    }
+  .container .right {
+    display: flex;
+    justify-content: center;
+  }
 
-    .container .right {
-        display: flex;
-        justify-content: center;
-    }
+  .container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .container .left {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container .left h3 {
-        text-align: center;
-    }
+  .container .left h3 {
+    text-align: center;
+  }
 }
 
-@media (max-width:830px) {
-    .naslovna-hero .naslovna-hero-content h1 {
-        font-size: 30px;
-    }
+@media (max-width: 830px) {
+  .naslovna-hero .naslovna-hero-content h1 {
+    font-size: 30px;
+  }
 
-    .naslovna-diy .naslovna-diy-content {
-        padding: 0 10px;
-    }
+  .naslovna-diy .naslovna-diy-content {
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 650px) {
-    .naslovna-diy .naslovna-diy-content h3 {
-        padding: 0 10px;
-    }
-
+  .naslovna-diy .naslovna-diy-content h3 {
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 600px) {
+  .container,
+  .kvalifikacije,
+  .naslovna-reviews {
+    padding: 0 10px;
+  }
 
-    .container,
-    .kvalifikacije,
-    .naslovna-reviews {
-        padding: 0 10px;
-    }
+  .container .right img {
+    width: 100%;
+  }
 
+  .proizvodi-container,
+  .projekti-container {
+    padding: 20px 10px;
+  }
 
-
-
-    .container .right img {
-        width: 100%;
-    }
-
-    .proizvodi-container,
-    .projekti-container {
-        padding: 20px 10px;
-    }
-
-    .naslovna-reviews h2::after {
-        content: "";
-        position: absolute;
-        left: 2 5%;
-        bottom: -5px;
-        height: 3px;
-        width: 50%;
-        background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
-        border-radius: 20px;
-    }
+  .naslovna-reviews h2::after {
+    content: "";
+    position: absolute;
+    left: 2 5%;
+    bottom: -5px;
+    height: 3px;
+    width: 50%;
+    background: linear-gradient(
+      90deg,
+      var(--main-color),
+      var(--secondary-color)
+    );
+    border-radius: 20px;
+  }
 }
 
 @media (max-width: 500px) {
-    .naslovna-hero .naslovna-hero-content h3 {
-        padding: 0;
-    }
+  .naslovna-hero .naslovna-hero-content h3 {
+    padding: 0;
+  }
 }
 
 @media (max-width: 450px) {
-    .naslovna-reviews .reviews-container .review {
-        flex: unset;
-        width: 100%;
-    }
+  .naslovna-reviews .reviews-container .review {
+    flex: unset;
+    width: 100%;
+  }
 }
 
 @media (max-width: 400px) {
-    .naslovna-reviews .reviews-container .review {
-        padding: 20px;
-    }
+  .naslovna-reviews .reviews-container .review {
+    padding: 20px;
+  }
 
-    .naslovna-reviews .reviews-container .review .text {
-        text-align: center;
-    }
+  .naslovna-reviews .reviews-container .review .text {
+    text-align: center;
+  }
 }
 
 @media (max-width: 330px) {
-    .naslovna-reviews .reviews-container .review {
-        padding: 5px;
-    }
+  .naslovna-reviews .reviews-container .review {
+    padding: 5px;
+  }
 }

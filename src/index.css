@@ -67,7 +67,6 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   width: fit-content;
   text-align: center;
-  font-size: 18px;
 }
 
 .button-primary:hover {
@@ -75,7 +74,7 @@ p {
 }
 
 .button-secondary {
-  padding: 15px 25px;
+  padding: 10px 25px;
   border-radius: 12px;
   cursor: pointer;
   color: var(--main-color);

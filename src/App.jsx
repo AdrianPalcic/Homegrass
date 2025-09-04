@@ -27,6 +27,7 @@ import BlogPostPage from "./pages/BlogPostPage";
 function App() {
   const setProizvodi = useCMSStore((state) => state.setProizvodi);
   const setProjekti = useCMSStore((state) => state.setProjekti);
+  const setBlog = useCMSStore((state) => state.setBlog);
 
   return (
     <>
@@ -54,6 +55,7 @@ function App() {
 
       <FetchCPT endpoint="proizvod" setState={setProizvodi} />
       <FetchCPT endpoint="projekt" setState={setProjekti} />
+      <FetchCPT endpoint="blog" setState={setBlog} />
 
       <ScrollToTop />
       <Navbar />

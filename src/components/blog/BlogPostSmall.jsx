@@ -8,8 +8,6 @@ const BlogPostSmall = ({ blog }) => {
   const cat = blog.acf.kategorija;
   const alt = blog._embedded?.["wp:featuredmedia"]?.[0]?.alt_text;
 
-  console.log(alt);
-
   return (
     <div className="blog-post-small">
       <div className="blog-img-container">

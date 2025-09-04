@@ -66,6 +66,7 @@
 }
 .search-cat .cat-cont span {
   width: 100%;
+  min-width: 170px;
   display: flex;
   justify-content: center;
   border-radius: 6px;
@@ -229,6 +230,26 @@
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  .search-cat .cat-cont {
+    flex-wrap: nowrap; /* ne prelama se */
+    overflow-x: auto; /* omogućava horizontalno skrolanje */
+    -webkit-overflow-scrolling: touch; /* glatko skrolanje na mobilnim uređajima */
+    gap: 10px;
+    padding-bottom: 4px; /* malo prostora ispod */
+  }
+
+  /* Hide scrollbar za webkit preglednike */
+  .search-cat .cat-cont::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Opcionalno: mala margin/padding između inputa i kategorija */
+  .search-cat {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
 
 @media (max-width: 690px) {
   .blog-posts .blog-posts-heading,
@@ -246,6 +267,8 @@
 .blogPost-body .heading h1 {
   font-size: 50px;
   font-weight: 500;
+  width: 70%;
+  margin: 0 auto;
 }
 .blogPost-body .heading span {
   color: var(--main-color);
@@ -254,11 +277,12 @@
 .blogPost-body .blogPost-img-container {
   margin: 0 auto;
   width: 60%;
-  height: 600px;
+  height: auto;
 }
 .blogPost-body .blogPost-img-container img {
   width: 100%;
   height: 100%;
+  max-height: 600px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -285,7 +309,10 @@
 .blogPost-body .blogPostPadding .autor-container .avatar {
   width: 70px;
   height: 70px;
-  padding: 4px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border: 1px solid var(--main-color);
 }
@@ -329,4 +356,38 @@
 .blogPost-body .blogPostPadding .button-con a:hover {
   border-bottom: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
+}
+
+.body-container h3 {
+  color: var(--main-color);
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.body-container {
+  line-height: 1.9;
+}
+
+@media (max-width: 1000px) {
+  .blogPost-body .blogPost-img-container {
+    width: 90%;
+  }
+  .blogPost-body .heading h1 {
+    width: 90%;
+  }
+}
+@media (max-width: 850px) {
+  .blogPost-body .heading {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 780px) {
+  .blogPost-body .heading h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .blogPost-body .blogPostPadding {
+    width: 90%;
+  }
 }

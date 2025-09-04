@@ -3,24 +3,29 @@ import BlogPostBig from "../components/blog/BlogPost";
 import BlogPostSmall from "../components/blog/BlogPostSmall";
 import Newsletter from "../components/global/Newsletter";
 import useCMSStore from "../store/useCMSStore";
-import FetchCPT from "../utils/FetchCPT";
+import { useState } from "react";
 
 const Blog = () => {
-  const setBlog = useCMSStore((state) => state.setBlog);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeTag, setActiveTag] = useState("");
+
   const blog = useCMSStore((state) => state.blog);
 
-  const sortedBlog = [...blog].sort(
-    (a, b) => new Date(a.date) - new Date(b.date)
-  );
+  // filtriranje blogova po search query i kategoriji
+  const filteredBlog = blog
+    .filter((b) =>
+      b.title.rendered.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .filter((b) => (activeTag ? b.acf.kategorija === activeTag : true))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // najnoviji prvi
 
-  const shortArray = sortedBlog.slice(0, 2);
-  const restOfThePosts = sortedBlog.slice(2);
+  const shortArray = filteredBlog.slice(0, 2);
+  const restOfThePosts = filteredBlog.slice(2);
 
-  console.log(shortArray);
+  const categories = ["Informativno", "Lifestyle", "Projekti", "Vodiči"];
 
   return (
     <>
-      <FetchCPT endpoint="blog" setState={setBlog} />
       <div className="blog-hero">
         <img src="/try.jpg" alt="Hero slika" />
         <div className="content">
@@ -38,15 +43,33 @@ const Blog = () => {
               idejama za umjetne travnjake.
             </p>
             <div className="search-cat">
-              <input type="text" placeholder={"Pretražite blogove..."} />
+              <input
+                type="text"
+                placeholder="Pretražite blogove..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
               <div className="cat-cont">
-                <span>Informativno</span>
-                <span>Lifestyle</span>
-                <span>Projekti</span>
-                <span>Vodiči</span>
+                <span
+                  className={activeTag === "" ? "active" : ""}
+                  onClick={() => setActiveTag("")}
+                >
+                  Sve kategorije
+                </span>
+
+                {categories.map((cat) => (
+                  <span
+                    key={cat}
+                    className={activeTag === cat ? "active" : ""}
+                    onClick={() => setActiveTag(activeTag === cat ? "" : cat)}
+                  >
+                    {cat}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
+
           <div className="blog-content">
             {shortArray.map((blog) => (
               <BlogPostBig blog={blog} key={blog.id} />

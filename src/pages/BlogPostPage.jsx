@@ -1,32 +1,91 @@
 import { useParams } from "react-router-dom";
+import parse, { domToReact } from "html-react-parser";
 import "../css/blog.css";
+import useCMSStore from "../store/useCMSStore";
+import { Loader, User } from "lucide-react";
+import { useMemo, memo } from "react";
+
 const BlogPostPage = () => {
   const { slug } = useParams();
+  const blog = useCMSStore((state) => state.blog);
+
+  const targetBlog = useMemo(
+    () => blog.find((blog) => String(blog.slug) === slug),
+    [blog, slug]
+  );
+
+  const content = targetBlog?.content.rendered;
+
+  const parsedContent = useMemo(() => {
+    if (!content) return null;
+
+    return parse(content, {
+      replace: (domNode) => {
+        if (domNode.type !== "tag" || !domNode.name) return;
+
+        switch (domNode.name) {
+          case "p":
+            return (
+              <p className="blog-paragraph">{domToReact(domNode.children)}</p>
+            );
+          case "h3":
+            return (
+              <h3 className="blog-heading">{domToReact(domNode.children)}</h3>
+            );
+          case "br":
+            return <br />;
+          default:
+            return domNode;
+        }
+      },
+    });
+  }, [content]);
+
+  const image = useMemo(
+    () => targetBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "",
+    [targetBlog]
+  );
+
+  const formattedDate = useMemo(() => {
+    if (!targetBlog?.date) return "";
+    const dateObj = new Date(targetBlog.date);
+    return new Intl.DateTimeFormat("hr-HR", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    }).format(dateObj);
+  }, [targetBlog?.date]);
+
+  if (!blog) return <Loader />;
+  if (!targetBlog) return <div>Blog post not found</div>;
+
+  const title = targetBlog.title.rendered;
+  const cat = targetBlog.acf.kategorija;
+  const alt = targetBlog._embedded?.["wp:featuredmedia"]?.[0]?.alt_text;
+  const subtitle = targetBlog.acf.subtitle;
 
   return (
     <div className="blogPost-body">
       <div className="heading">
-        <span>06. rujan, 2025</span>
-        <h1>Kako odabrati pravu umjetnu travu za vaš vrt i terasu</h1>
+        <span>{formattedDate}</span>
+        <h1>{title}</h1>
       </div>
 
       <div className="blogPost-img-container">
-        <img src="/try.jpg" alt="Blog post homegrass" />
+        <img src={image} alt={alt || ""} loading="lazy" decoding="async" />
       </div>
 
       <div className="blogPostPadding">
-        <span className="category">Informativno</span>
+        <span className="category">{cat}</span>
 
         <a
           href="https://apdesign.dev"
           target="_blank"
+          rel="noopener noreferrer"
           className="autor-container"
         >
           <div className="avatar">
-            <img
-              src="/cetka PB.png"
-              alt="Autor sadrzaja za umjetnu travu hrvatska"
-            />
+            <User />
           </div>
           <div className="name-title">
             <p className="name">Adrian</p>
@@ -35,17 +94,10 @@ const BlogPostPage = () => {
         </a>
 
         <div className="subtitle">
-          <h2>Ovdje počinje naša priča</h2>
+          <h2>{subtitle}</h2>
         </div>
 
-        <div className="body-container">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-            modi delectus, architecto est molestiae impedit non dolore dolorem
-            assumenda culpa iste? Qui quaerat minus necessitatibus adipisci
-            sunt, quasi eaque modi.
-          </p>
-        </div>
+        <div className="body-container">{parsedContent}</div>
 
         <div className="button-con">
           <a href="/blog">Zanima Vas još?</a>
@@ -55,4 +107,4 @@ const BlogPostPage = () => {
   );
 };
 
-export default BlogPostPage;
+export default memo(BlogPostPage);
