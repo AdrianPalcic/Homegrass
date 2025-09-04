@@ -14,7 +14,9 @@ const Naslovna = () => {
   useEffect(() => {
     if (window.gtag) {
       window.gtag("event", "conversion", {
-        send_to: "AW-16942334557/tiM4CJG1ne8aEN2E3o4_",
+        send_to: "AW-16942334557/Hcs-CIK-m5QbEN2E3o4_",
+        value: 1.0,
+        currency: "EUR",
       });
     }
   }, []);
