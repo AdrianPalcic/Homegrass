@@ -5,73 +5,99 @@
   <url><loc>https://homegrass.hr/kontakt</loc><priority>0.8</priority></url>
   <url><loc>https://homegrass.hr/proizvodi</loc><priority>0.8</priority></url>
   <url><loc>https://homegrass.hr/projekti</loc><priority>0.8</priority></url>
+  <url><loc>https://homegrass.hr/blog</loc><priority>0.8</priority></url>
   <url><loc>https://homegrass.hr/vodic</loc><priority>0.8</priority></url>
   <url><loc>https://homegrass.hr/hvala</loc><priority>0.5</priority></url>
   <url><loc>https://homegrass.hr/kolacici</loc><priority>0.4</priority></url>
   <url><loc>https://homegrass.hr/uvjeti</loc><priority>0.3</priority></url>
   <url><loc>https://homegrass.hr/privacy</loc><priority>0.2</priority></url>
   <url>
-    <loc>https://homegrass.hr/proizvod/35</loc>
+    <loc>https://homegrass.hr/blog/najcesce-pogreske-pri-postavljanju-umjetne-trave-i-kako-ih-izbjeci</loc>
+    <lastmod>2025-09-03T16:03:20.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://homegrass.hr/blog/prednosti-umjetne-trave-za-urbane-vrtove-i-balkone</loc>
+    <lastmod>2025-09-03T15:59:30.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://homegrass.hr/blog/inspirativni-projekti-s-umjetnom-travom-od-malih-terasa-do-velikih-okucnica</loc>
+    <lastmod>2025-09-03T15:57:13.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://homegrass.hr/blog/kako-umjetna-trava-mijenja-nacin-zivota</loc>
+    <lastmod>2025-09-03T15:52:58.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://homegrass.hr/blog/kako-pravilno-pripremiti-podlogu-za-postavljanje-umjetne-trave</loc>
+    <lastmod>2025-09-04T12:01:37.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://homegrass.hr/proizvod/premier</loc>
     <lastmod>2025-07-29T10:42:33.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/proizvod/30</loc>
+    <loc>https://homegrass.hr/proizvod/glorious</loc>
     <lastmod>2025-07-29T10:42:44.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/proizvod/25</loc>
+    <loc>https://homegrass.hr/proizvod/optimal</loc>
     <lastmod>2025-07-29T10:42:52.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/proizvod/20</loc>
+    <loc>https://homegrass.hr/proizvod/smart</loc>
     <lastmod>2025-07-29T10:42:59.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/proizvod/15</loc>
+    <loc>https://homegrass.hr/proizvod/elegance</loc>
     <lastmod>2025-07-29T10:43:05.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/109</loc>
+    <loc>https://homegrass.hr/projekt/dvoriste-zagreb</loc>
     <lastmod>2025-06-25T15:43:57.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/101</loc>
+    <loc>https://homegrass.hr/projekt/vrt-vrbnik</loc>
     <lastmod>2025-06-25T15:40:46.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/97</loc>
+    <loc>https://homegrass.hr/projekt/split-park-festival</loc>
     <lastmod>2025-06-25T15:41:43.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/87</loc>
+    <loc>https://homegrass.hr/projekt/privatna-kuca-zadar</loc>
     <lastmod>2025-06-25T15:35:03.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/85</loc>
+    <loc>https://homegrass.hr/projekt/dvoriste-lomnica</loc>
     <lastmod>2025-06-25T15:21:13.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/82</loc>
+    <loc>https://homegrass.hr/projekt/igraliste-risika</loc>
     <lastmod>2025-06-25T15:12:07.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/79</loc>
+    <loc>https://homegrass.hr/projekt/dvoriste-ivanec</loc>
     <lastmod>2025-06-25T15:02:48.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homegrass.hr/projekt/71</loc>
+    <loc>https://homegrass.hr/projekt/igraliste-krk</loc>
     <lastmod>2025-06-25T14:51:45.000Z</lastmod>
     <priority>0.7</priority>
   </url>

@@ -10,6 +10,10 @@ const Footer = () => {
         <div className="logo logo-footer">
           <MySVG />
           <h3>Umjetna trava vrhunske kvalitete za vaš dom, vrt ili balkon.</h3>
+          <h4>HomeGrass – brand tvrtke Artificial Grass Specialists d.o.o.</h4>
+          Artificial Grass Specialists d.o.o., Zagreb Upisan na Trgovačkom sudu
+          u Zagrebu OIB: 16476619517 temeljni kapital: 2.650,00EUR Direktor:
+          Davor Novak
         </div>
       </div>
 

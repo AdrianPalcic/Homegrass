@@ -56,8 +56,14 @@ const BlogPostPage = () => {
     }).format(dateObj);
   }, [targetBlog?.date]);
 
-  if (!blog) return <Loader />;
-  if (!targetBlog) return <div>Blog post not found</div>;
+  if (!targetBlog)
+    return (
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    );
 
   const title = targetBlog.title.rendered;
   const cat = targetBlog.acf.kategorija;
