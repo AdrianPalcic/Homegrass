@@ -72,6 +72,8 @@ const Proizvodi = ({ proizvodPage, selectedProduct }) => {
                 p._embedded?.["wp:featuredmedia"]?.[0]?.alt_text ||
                 title ||
                 "Homegrass proizvodi - vrhunska ponuda umjetne trave";
+              const hasDiscount = p.acf.popust === true;
+              const postotak = hasDiscount ? p.acf.postotak : "";
 
               return (
                 <ProizvodCard
