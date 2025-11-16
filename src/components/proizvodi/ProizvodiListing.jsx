@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import ProizvodCard from "../cards/ProizvodCard";
-import { SlidersHorizontal } from "lucide-react";
 import useCMSStore from "../../store/useCMSStore";
 
 const ProizvodiListing = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-
   const proizvodi = useCMSStore((state) => state.proizvodi);
 
   const shortenText = (text, maxLength = 120) => {
@@ -31,6 +28,8 @@ const ProizvodiListing = () => {
                 p._embedded?.["wp:featuredmedia"]?.[0]?.alt_text ||
                 title ||
                 "Homegrass proizvodi - vrhunska ponuda umjetne trave";
+              const hasDiscount = p.acf.popust === true;
+              const postotak = hasDiscount ? p.acf.postotak : "";
 
               return (
                 <ProizvodCard
@@ -40,6 +39,8 @@ const ProizvodiListing = () => {
                   opis={shortenText(opis)}
                   slika={slika}
                   alt={alt}
+                  hasDiscount={hasDiscount}
+                  postotak={postotak}
                 />
               );
             })}
