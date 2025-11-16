@@ -7,6 +7,7 @@ import "../css/proizvod.css";
 import { useParams } from "react-router-dom";
 import useCMSStore from "../store/useCMSStore";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
 
 const Proizvod = () => {
   const { slug } = useParams();
@@ -42,6 +43,16 @@ const Proizvod = () => {
     proizvod.acf?.slika3,
   ].filter((img) => img && img.url);
 
+  const price = proizvod.acf.cijena;
+  const hasDiscount = proizvod.acf.popust === true;
+  const poruka = hasDiscount ? proizvod.acf.popustporuka : "Nema Poruka";
+  const postotak = hasDiscount ? proizvod.acf.postotak : "";
+
+  const finalPrice = hasDiscount
+    ? parseFloat(price) * (1 - postotak / 100)
+    : price;
+
+  console.log(poruka);
   return (
     <>
       <Helmet>
@@ -78,6 +89,10 @@ const Proizvod = () => {
           opis={opis}
           image={featuredImage}
           images={images}
+          price={price}
+          finalPrice={finalPrice}
+          hasDiscount={hasDiscount}
+          poruka={poruka}
         />
         <ProizvodSpecs karakteristike={karakteristikeArray} />
         <ProizvodiSection proizvodPage={true} selectedProduct={proizvod} />

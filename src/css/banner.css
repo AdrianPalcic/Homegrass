@@ -1,0 +1,17 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 10px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 700;
+}
+.banner h3 .banner-link {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+.banner h3 {
+  text-align: center;
+}
