@@ -11,15 +11,25 @@ const Projekt = () => {
   const { slug } = useParams();
   const projekti = useCMSStore((state) => state.projekti);
   const projekt = projekti.find((p) => String(p.slug) === slug);
+  const proizvod = projekt?.acf?.proizvodi || "";
+  const proizvodi = useCMSStore((state) => state.proizvodi);
+  const koristeniProizvod = proizvodi.find((p) => p?.acf?.naziv === proizvod);
+
+  if (!projekt) {
+    return (
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    );
+  }
 
   const title = projekt?.title?.rendered;
   const slika = projekt?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
   const opis = projekt?.acf?.opis || "";
   const namjena = projekt?.acf?.namjena || "";
   const lokacija = projekt?.acf?.lokacija || "";
-  const proizvod = projekt?.acf?.proizvodi || "";
-  const proizvodi = useCMSStore((state) => state.proizvodi);
-  const koristeniProizvod = proizvodi.find((p) => p?.acf?.naziv === proizvod);
 
   const proizvodNaslov = koristeniProizvod?.acf.naziv;
   const proizvodId = koristeniProizvod?.id;

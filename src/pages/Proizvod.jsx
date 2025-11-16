@@ -15,7 +15,13 @@ const Proizvod = () => {
   const proizvod = proizvodi.find((p) => String(p.slug) === slug);
 
   if (!proizvod) {
-    return <div className="loading">Ucitavanje...</div>;
+    return (
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    );
   }
 
   const rawTitle = proizvod.title?.rendered || "";
