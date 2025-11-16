@@ -4,10 +4,12 @@ import ProizvodCard from "../cards/ProizvodCard";
 
 const Proizvodi = ({ proizvodPage, selectedProduct }) => {
   const proizvodi = useCMSStore((state) => state.proizvodi);
-
-  const filteredProducts = proizvodi.filter(
-    (p) => String(p.id) !== String(selectedProduct?.id)
+  const proizvodiByDate = [...proizvodi].sort(
+    (a, b) => new Date(b.modified) - new Date(a.modified)
   );
+  const filteredProducts = proizvodi
+    .filter((p) => String(p.id) !== String(selectedProduct?.id))
+    .sort((a, b) => new Date(b.modified) - new Date(a.modified));
 
   const shortenText = (text, maxLength = 120) => {
     return text.length > maxLength
@@ -33,7 +35,7 @@ const Proizvodi = ({ proizvodPage, selectedProduct }) => {
       <div className="proizvodi">
         {!proizvodPage ? (
           <>
-            {proizvodi.map((p) => {
+            {proizvodiByDate.map((p) => {
               const title = p.title?.rendered;
               const opis = p.acf?.opis || "";
               const slika =
@@ -42,6 +44,8 @@ const Proizvodi = ({ proizvodPage, selectedProduct }) => {
                 p._embedded?.["wp:featuredmedia"]?.[0]?.alt_text ||
                 title ||
                 "Homegrass proizvodi - vrhunska ponuda umjetne trave";
+              const hasDiscount = p.acf.popust === true;
+              const postotak = hasDiscount ? p.acf.postotak : "";
 
               return (
                 <ProizvodCard
@@ -51,6 +55,8 @@ const Proizvodi = ({ proizvodPage, selectedProduct }) => {
                   opis={shortenText(opis)}
                   slika={slika}
                   alt={alt}
+                  hasDiscount={hasDiscount}
+                  postotak={postotak}
                 />
               );
             })}

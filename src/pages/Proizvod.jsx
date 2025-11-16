@@ -52,7 +52,7 @@ const Proizvod = () => {
     ? parseFloat(price) * (1 - postotak / 100)
     : price;
 
-  console.log(poruka);
+  console.log(proizvod);
   return (
     <>
       <Helmet>

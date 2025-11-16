@@ -1,10 +1,24 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Tag } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProizvodCard = ({ naziv, opis, slika, slug, alt }) => {
+const ProizvodCard = ({
+  naziv,
+  opis,
+  slika,
+  slug,
+  alt,
+  postotak,
+  hasDiscount,
+}) => {
   return (
     <div className="proizvodi-card">
+      {hasDiscount && (
+        <div className="discount-tag">
+          <p>{postotak}% </p>
+          <Tag />
+        </div>
+      )}
       <div className="image">
         <img src={slika} alt={alt} loading="lazy" />
       </div>

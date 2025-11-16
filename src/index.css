@@ -259,6 +259,7 @@ a.button-primary {
 .proizvodi-container .proizvodi .proizvodi-card {
   display: flex;
   flex-direction: column;
+  position: relative;
   z-index: 1;
   min-width: 300px;
   border: 1px solid black;
@@ -268,7 +269,20 @@ a.button-primary {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: 0.3s ease;
 }
-
+.proizvodi-container .proizvodi .proizvodi-card .discount-tag {
+  position: absolute;
+  right: 6px;
+  color: var(--main-color);
+  display: flex;
+  align-items: end;
+  top: 0;
+  gap: 4px;
+}
+.proizvodi-container .proizvodi .proizvodi-card .discount-tag p {
+  color: var(--main-color);
+  font-weight: 800;
+  font-size: 18px;
+}
 .proizvodi-container .proizvodi .proizvodi-card:hover {
   transform: scale(1.02);
 }
