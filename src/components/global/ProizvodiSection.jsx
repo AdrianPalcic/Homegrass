@@ -81,6 +81,8 @@ const Proizvodi = ({ proizvodPage, selectedProduct }) => {
                   opis={shortenText(opis)}
                   slika={slika}
                   alt={alt}
+                  hasDiscount={hasDiscount}
+                  postotak={postotak}
                 />
               );
             })}
