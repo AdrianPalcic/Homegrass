@@ -10,7 +10,7 @@ const Prednosti = () => {
             <div className="prednosti-card-container">
                 <div className="prednosti-card">
                     <Wallet className='image' />
-                    <h3>Ušteda Novca</h3>
+                    <h3>Ušteda novca</h3>
                     <p>Sami instalirajte i izbjegnite troškove profesionalne ugradnje.</p>
                     <span>Bez dodatnih troškova za montažu.</span>
                 </div>

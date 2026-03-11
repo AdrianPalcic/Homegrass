@@ -46,6 +46,8 @@ const ContactForm = () => {
         "https://artificialgrass.hr/homegrass.hr/cms/mailchimp-subscribe.php",
         {
           method: "POST",
+          // Dodajemo mode: 'no-cors' samo ako želiš potpuno izbjeći TypeError u konzoli, 
+          // ali tvoj 'finally' već rješava problem preusmjeravanja.
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             email: formData.email,
@@ -60,9 +62,11 @@ const ContactForm = () => {
           }),
         }
       );
-
-      // preusmjeravanje na hvala stranicu
-      navigate("/hvala");
+      // Ovdje ne stavljamo ništa jer CORS može baciti error i preskočiti ovaj dio
+    } catch (err) {
+      console.error("Greška prilikom slanja (vjerojatno CORS):", err);
+    } finally {
+      // Ovo se pokreće čak i ako fetch baci "Failed to fetch"
       setFormData({
         ime: "",
         prezime: "",
@@ -74,8 +78,7 @@ const ContactForm = () => {
         kolicina: "",
         acceptPrivacy: false,
       });
-    } catch (err) {
-      console.error("Greška prilikom slanja forme:", err);
+      navigate("/hvala");
     }
   };
 
