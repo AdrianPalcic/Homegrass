@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // za redirect
+import { useNavigate } from "react-router-dom";
 import "../../css/kontaktform.css";
 
 import {
@@ -16,7 +16,7 @@ import {
 } from "../../utils/Icons";
 
 const ContactForm = () => {
-  const navigate = useNavigate(); // za redirect
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     ime: "",
     prezime: "",
@@ -42,31 +42,23 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      await fetch(
-        "https://artificialgrass.hr/homegrass.hr/cms/mailchimp-subscribe.php",
-        {
-          method: "POST",
-          // Dodajemo mode: 'no-cors' samo ako želiš potpuno izbjeći TypeError u konzoli, 
-          // ali tvoj 'finally' već rješava problem preusmjeravanja.
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: formData.email,
-            ime: formData.ime,
-            prezime: formData.prezime,
-            mobitel: formData.mobitel,
-            grad: formData.grad,
-            postanskiBroj: formData.postanskiBroj,
-            poruka: formData.poruka,
-            kolicina: formData.kolicina,
-            source: "contact",
-          }),
-        }
-      );
-      // Ovdje ne stavljamo ništa jer CORS može baciti error i preskočiti ovaj dio
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "f284d69b-0129-4223-9ff6-6a519862efa9",
+          name: `${formData.ime} ${formData.prezime}`,
+          email: formData.email,
+          mobitel: formData.mobitel,
+          grad: formData.grad,
+          postanskiBroj: formData.postanskiBroj,
+          message: formData.poruka,
+          kolicina: formData.kolicina,
+        }),
+      });
     } catch (err) {
-      console.error("Greška prilikom slanja (vjerojatno CORS):", err);
+      console.error("Greška prilikom slanja:", err);
     } finally {
-      // Ovo se pokreće čak i ako fetch baci "Failed to fetch"
       setFormData({
         ime: "",
         prezime: "",
@@ -96,6 +88,9 @@ const ContactForm = () => {
             </div>
             <div className="card-content">
               <form onSubmit={handleSubmit} className="form">
+                {/* Web3Forms hidden access key */}
+                <input type="hidden" name="access_key" value="f284d69b-0129-4223-9ff6-6a519862efa9" />
+
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="firstName" className="form-label">
@@ -235,14 +230,14 @@ const ContactForm = () => {
                   <div className="input-wrapper">
                     <MessageSquare className="textarea-icon" />
                     <textarea
-                      id="message"
-                      name="poruka"
-                      placeholder="Opišite kako vam možemo pomoći..."
-                      value={formData.poruka}
-                      onChange={handleInputChange}
-                      className="form-textarea"
-                      required
-                    />
+  id="message"
+  name="poruka"
+  placeholder="Opišite kako vam možemo pomoći..."
+  value={formData.poruka}
+  onChange={handleInputChange}
+  className="form-textarea"
+  required
+/>
                   </div>
                 </div>
 
@@ -276,7 +271,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Information — unchanged */}
           <div className="contact-info">
             <div className="info-card">
               <div className="card-header">
@@ -288,52 +283,33 @@ const ContactForm = () => {
               <div className="card-content">
                 <div className="contact-item">
                   <div className="contact-icon-wrapper">
-                    <div className="contact-icon">
-                      <Phone />
-                    </div>
+                    <div className="contact-icon"><Phone /></div>
                   </div>
                   <div className="contact-details">
                     <h3 className="contact-title">Telefon</h3>
-                    <a href="tel:+385912686803" className="contact-value">
-                      +385 91 2686 803
-                    </a>
+                    <a href="tel:+385912686803" className="contact-value">+385 91 2686 803</a>
                     <p className="contact-subtitle">Pon-Pet: 8:00 - 17:00</p>
                   </div>
                 </div>
 
                 <div className="contact-item">
                   <div className="contact-icon-wrapper">
-                    <div className="contact-icon">
-                      <Mail />
-                    </div>
+                    <div className="contact-icon"><Mail /></div>
                   </div>
                   <div className="contact-details">
                     <h3 className="contact-title">Email</h3>
-                    <a
-                      href="mailto:info@homegrass.hr"
-                      className="contact-value"
-                    >
-                      info@homegrass.hr
-                    </a>
-                    <p className="contact-subtitle">
-                      Odgovaramo u najkraćem roku
-                    </p>
+                    <a href="mailto:info@homegrass.hr" className="contact-value">info@homegrass.hr</a>
+                    <p className="contact-subtitle">Odgovaramo u najkraćem roku</p>
                   </div>
                 </div>
 
                 <div className="contact-item">
                   <div className="contact-icon-wrapper">
-                    <div className="contact-icon">
-                      <MapPin />
-                    </div>
+                    <div className="contact-icon"><MapPin /></div>
                   </div>
                   <div className="contact-details">
                     <h3 className="contact-title">Lokacija</h3>
-                    <a
-                      href="https://maps.app.goo.gl/BxhftaEgRvDtekNx8"
-                      target="_blank"
-                      className="contact-value"
-                    >
+                    <a href="https://maps.app.goo.gl/BxhftaEgRvDtekNx8" target="_blank" className="contact-value">
                       Jaruščica 5/A, Zagreb
                     </a>
                     <p className="contact-subtitle">Hrvatska</p>
@@ -342,7 +318,6 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* Map Section */}
             <div className="map-card">
               <div className="card-header">
                 <h3 className="map-title">Pronađite nas na karti</h3>
@@ -360,41 +335,24 @@ const ContactForm = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
-                <p className="map-description">
-                  Kliknite na mapu za detaljne upute za dolazak
-                </p>
+                <p className="map-description">Kliknite na mapu za detaljne upute za dolazak</p>
               </div>
             </div>
 
-            {/* Social Media */}
             <div className="social-card">
               <div className="card-header">
-                <h3 className="social-title">
-                  Pronađite nas na društvenim mrežama
-                </h3>
+                <h3 className="social-title">Pronađite nas na društvenim mrežama</h3>
               </div>
               <div className="card-content">
                 <div className="social-links">
-                  <a
-                    href="https://www.instagram.com/homegrass.hr/"
-                    className="social-link"
-                    aria-label="Instagram"
-                    target="_blank"
-                  >
+                  <a href="https://www.instagram.com/homegrass.hr/" className="social-link" aria-label="Instagram" target="_blank">
                     <Instagram />
                   </a>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61574146090430"
-                    className="social-link"
-                    aria-label="Facebook"
-                    target="_blank"
-                  >
+                  <a href="https://www.facebook.com/profile.php?id=61574146090430" className="social-link" aria-label="Facebook" target="_blank">
                     <Facebook />
                   </a>
                 </div>
-                <p className="social-description">
-                  Pratite nas za najnovije vijesti i ažuriranja
-                </p>
+                <p className="social-description">Pratite nas za najnovije vijesti i ažuriranja</p>
               </div>
             </div>
           </div>
